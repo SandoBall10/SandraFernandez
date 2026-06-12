@@ -26,13 +26,6 @@ export default function App() {
     }
   };
 
-  const scrollToPlan = () => {
-    const el = document.getElementById('plan');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans antialiased selection:bg-[#FFCA00] selection:text-black">
       
@@ -40,10 +33,7 @@ export default function App() {
       <Navbar onJoinClick={scrollToJoin} />
 
       {/* 2. Hero Section */}
-      <Hero
-        onLearnMoreClick={scrollToPlan}
-        onDownloadClick={scrollToPlan}
-      />
+      <Hero onJoinClick={scrollToJoin} />
 
       {/* 3. Conoce a Sandra (Bio Timeline and stats) */}
       <BioSection />

@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Download, Users, ChevronLeft, ChevronRight } from 'lucide-react';
-import photo1 from '@/src/assets/1.jpg';
-import photo2 from '@/src/assets/2.jpg';
-import photo3 from '@/src/assets/3.jpg';
-import photo4 from '@/src/assets/4.jpg';
-import photo5 from '@/src/assets/5.jpg';
-import photo6 from '@/src/assets/6.jpg';
-import photo7 from '@/src/assets/7.jpg';
+import { downloadPlanGobierno } from '../lib/downloadPlanGobierno';
 
-const CANDIDATE_PHOTOS = [photo1, photo2, photo3, photo4, photo5, photo6, photo7];
+const heroPhotoModules = import.meta.glob<string>('../assets/*.jpg', {
+  eager: true,
+  import: 'default',
+});
+
+const CANDIDATE_PHOTOS = Object.keys(heroPhotoModules)
+  .filter((path) => /\/(\d+)\.jpg$/.test(path))
+  .sort((a, b) => {
+    const numA = Number(a.match(/\/(\d+)\.jpg$/)?.[1] ?? 0);
+    const numB = Number(b.match(/\/(\d+)\.jpg$/)?.[1] ?? 0);
+    return numA - numB;
+  })
+  .map((path) => heroPhotoModules[path]);
 
 interface HeroProps {
-  onLearnMoreClick: () => void;
-  onDownloadClick: () => void;
+  onJoinClick: () => void;
 }
 
-export default function Hero({ onLearnMoreClick, onDownloadClick }: HeroProps) {
+export default function Hero({ onJoinClick }: HeroProps) {
   const [currentIdx, setCurrentIdx] = useState(0);
 
   useEffect(() => {
@@ -88,15 +93,15 @@ export default function Hero({ onLearnMoreClick, onDownloadClick }: HeroProps) {
               id="hero-ctas"
             >
               <button
-                onClick={onLearnMoreClick}
+                onClick={onJoinClick}
                 className="bg-[#FFCA00] text-black font-sans font-extrabold px-8 py-4 rounded-xl shadow-[0_6px_20px_rgba(255,202,0,0.35)] hover:shadow-[0_8px_25px_rgba(255,202,0,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center space-x-3 border-2 border-black focus:outline-none cursor-pointer"
-                id="hero-btn-propuestas"
+                id="hero-btn-unete"
               >
-                <span>Nuestras Propuestas</span>
+                <span>Únete a nosotros</span>
                 <ArrowRight size={20} />
               </button>
               <button
-                onClick={onDownloadClick}
+                onClick={downloadPlanGobierno}
                 className="bg-white hover:bg-gray-50 text-black font-sans font-bold px-8 py-4 rounded-xl border-2 border-black transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center space-x-3 shadow-sm hover:shadow focus:outline-none cursor-pointer"
                 id="hero-btn-plan"
               >
@@ -196,21 +201,27 @@ export default function Hero({ onLearnMoreClick, onDownloadClick }: HeroProps) {
                   <ChevronRight size={18} />
                 </button>
 
-                {/* Image carousel position dots indicator */}
-                <div className="absolute bottom-22 left-1/2 -translate-x-1/2 z-20 flex space-x-1.5 bg-black/40 px-2 py-1 rounded-full backdrop-blur-xs">
-                  {CANDIDATE_PHOTOS.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setCurrentIdx(index);
-                      }}
-                      className={`w-1.5 h-1.5 rounded-full transition-all ${
-                        index === currentIdx ? 'bg-[#FFCA00] scale-125' : 'bg-white/60 hover:bg-white'
-                      }`}
-                      aria-label={`Ir a foto ${index + 1}`}
-                    />
-                  ))}
+                {/* Indicador de posición */}
+                <div className="absolute bottom-22 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 bg-black/40 px-2 py-1 rounded-full backdrop-blur-xs max-w-[85%]">
+                  {CANDIDATE_PHOTOS.length <= 12 ? (
+                    CANDIDATE_PHOTOS.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCurrentIdx(index);
+                        }}
+                        className={`w-1.5 h-1.5 rounded-full transition-all shrink-0 ${
+                          index === currentIdx ? 'bg-[#FFCA00] scale-125' : 'bg-white/60 hover:bg-white'
+                        }`}
+                        aria-label={`Ir a foto ${index + 1}`}
+                      />
+                    ))
+                  ) : (
+                    <span className="font-mono text-[10px] font-bold text-white px-1 whitespace-nowrap">
+                      {currentIdx + 1} / {CANDIDATE_PHOTOS.length}
+                    </span>
+                  )}
                 </div>
 
                 {/* Info Overlay Panel */}

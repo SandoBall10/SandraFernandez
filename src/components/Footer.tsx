@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart } from 'lucide-react';
+import logoImg from '@/src/assets/logo.png';
 
 export default function Footer() {
   return (
@@ -10,12 +11,11 @@ export default function Footer() {
           {/* Logo & Manifesto Block - 5 columns */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden shadow-md bg-[#FFCA00]">
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden shadow-md bg-white">
                 <img
-                  src="/assets/logo.svg"
+                  src={logoImg}
                   alt="Logo País Para Todos"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import FlipClock from './FlipClock';
+import logoImg from '@/src/assets/logo.png';
 
 interface NavbarProps {
   onJoinClick: () => void;
@@ -38,7 +39,6 @@ export default function Navbar({ onJoinClick }: NavbarProps) {
   const navLinks = [
     { label: 'Inicio', target: 'inicio' },
     { label: 'Sandra', target: 'nosotros' },
-    { label: 'Propuestas', target: 'plan' },
     { label: 'Plan de Gobierno', target: 'plan' },
     { label: 'Agenda', target: 'agenda' },
   ];
@@ -74,10 +74,9 @@ export default function Navbar({ onJoinClick }: NavbarProps) {
             {/* Actual custom Logo of "País Para Todos" with curving road and brand elements */}
             <div className="relative w-11 h-11 flex items-center justify-center rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300">
               <img
-                src="/assets/logo.svg"
+                src={logoImg}
                 alt="Logo País Para Todos"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <div>
