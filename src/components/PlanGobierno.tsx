@@ -15,20 +15,20 @@ export default function PlanGobierno() {
   };
 
   return (
-    <section id="plan" className="py-20 lg:py-24 bg-white relative overflow-hidden border-b border-gray-100">
+    <section id="plan" className="py-20 lg:py-24 bg-transparent relative overflow-hidden border-b border-gray-100/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Columna izquierda — texto */}
-          <div className="text-left space-y-5">
-            <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+          <div className="text-left space-y-5 bg-white/90 backdrop-blur-sm border border-gray-200/80 rounded-2xl p-6 sm:p-8 shadow-sm">
+            <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-gray-800 bg-[#FFCA00]/30 border border-[#FFCA00]/50 px-3 py-1 rounded-full">
               Documento de Trabajo
             </span>
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight leading-tight">
-              <span className="text-gray-900">Plan de Gobierno Definitivo:</span>
+              <span className="text-black">Plan de Gobierno Definitivo:</span>
               <br />
-              <span className="text-gray-400">Técnico, Ético y Viable</span>
+              <span className="text-gray-900">Técnico, Ético y Viable</span>
             </h2>
-            <p className="font-sans text-base sm:text-lg text-gray-500 leading-relaxed max-w-xl">
+            <p className="font-sans text-base sm:text-lg text-gray-800 leading-relaxed max-w-xl font-medium">
               Nuestra propuesta no es una lista de promesas al azar. Es un documento de planificación pública
               estructurado bajo un riguroso marco de costo-beneficio y metas medibles para transformar Nuevo Chimbote.
             </p>

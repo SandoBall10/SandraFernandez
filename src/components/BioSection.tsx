@@ -5,7 +5,7 @@ import { Award, BookOpen, Briefcase, ChevronRight } from 'lucide-react';
 
 export default function BioSection() {
   return (
-    <section id="nosotros" className="py-24 bg-white border-y border-gray-100 relative">
+    <section id="nosotros" className="py-24 bg-transparent border-y border-gray-100/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

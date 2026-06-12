@@ -291,13 +291,6 @@ export default function JoinForm() {
 
         </div>
 
-        {/* Dynamic supporting text banner under register */}
-        <div className="mt-12 text-center max-w-xl mx-auto space-y-2">
-          <p className="font-sans text-xs text-gray-400 leading-normal">
-            * Al unirte, autorizas el contacto informativo de la campaña oficial de Sandra Fernández según la política de habeas data vigente. No enviamos spam ni compartimos bases de datos.
-          </p>
-        </div>
-
       </div>
     </section>
   );

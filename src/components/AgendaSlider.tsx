@@ -46,7 +46,7 @@ export default function AgendaSlider() {
   };
 
   return (
-    <section id="agenda" className="py-24 bg-gray-50/70 relative border-b border-gray-100">
+    <section id="agenda" className="py-24 bg-transparent relative border-b border-gray-100/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

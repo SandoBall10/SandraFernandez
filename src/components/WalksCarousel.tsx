@@ -63,7 +63,7 @@ export default function WalksCarousel() {
   };
 
   return (
-    <section id="caminatas" className="py-10 lg:py-12 bg-white relative border-b border-gray-100">
+    <section id="caminatas" className="py-10 lg:py-12 bg-transparent relative border-b border-gray-100/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Encabezado compacto */}
         <div className="flex items-center justify-between gap-4 mb-4">

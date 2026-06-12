@@ -43,7 +43,7 @@ export default function Hero({ onJoinClick }: HeroProps) {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen pt-36 lg:pt-48 pb-16 flex items-center bg-radial from-gray-50 via-white to-gray-50 overflow-hidden"
+      className="relative min-h-screen pt-36 lg:pt-48 pb-16 flex items-center bg-transparent overflow-hidden"
     >
       {/* Background abstract graphic representing community and unity */}
       <div className="absolute inset-0 z-0 opacity-40 select-none pointer-events-none">
@@ -115,38 +115,38 @@ export default function Hero({ onJoinClick }: HeroProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="pt-6 border-t border-gray-100 grid grid-cols-3 gap-4"
+              className="pt-6 border-t border-gray-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3"
               id="hero-trust-indicators"
             >
-              <div className="flex items-center space-x-2.5">
-                <div className="bg-yellow-50 text-yellow-600 p-2 rounded-lg">
+              <div className="flex items-center gap-2.5 bg-[#FFCA00]/25 backdrop-blur-sm border border-[#FFCA00]/40 rounded-xl px-3 py-2.5 shadow-sm">
+                <div className="bg-[#FFCA00] text-black p-2 rounded-lg shrink-0">
                   <Users size={18} className="text-black" />
                 </div>
                 <div>
-                  <span className="block font-sans font-black text-base text-gray-900 leading-tight">100%</span>
-                  <span className="block font-sans text-xs text-gray-500">Cercana al Vecino</span>
+                  <span className="block font-sans font-black text-base text-black leading-tight">100%</span>
+                  <span className="block font-sans text-xs font-semibold text-gray-800">Cercana al Vecino</span>
                 </div>
               </div>
-              <div className="flex items-center space-x-2.5">
-                <div className="bg-yellow-50 text-yellow-600 p-2 rounded-lg">
+              <div className="flex items-center gap-2.5 bg-[#FFCA00]/25 backdrop-blur-sm border border-[#FFCA00]/40 rounded-xl px-3 py-2.5 shadow-sm">
+                <div className="bg-[#FFCA00] text-black p-2 rounded-lg shrink-0">
                   <svg className="w-[18px] h-[18px] text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="block font-sans font-black text-base text-gray-900 leading-tight">Cero</span>
-                  <span className="block font-sans text-xs text-gray-500">Corrupción</span>
+                  <span className="block font-sans font-black text-base text-black leading-tight">Cero</span>
+                  <span className="block font-sans text-xs font-semibold text-gray-800">Corrupción</span>
                 </div>
               </div>
-              <div className="flex items-center space-x-2.5">
-                <div className="bg-yellow-50 text-yellow-600 p-2 rounded-lg">
+              <div className="flex items-center gap-2.5 bg-[#FFCA00]/25 backdrop-blur-sm border border-[#FFCA00]/40 rounded-xl px-3 py-2.5 shadow-sm">
+                <div className="bg-[#FFCA00] text-black p-2 rounded-lg shrink-0">
                   <svg className="w-[18px] h-[18px] text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="block font-sans font-black text-base text-gray-900 leading-tight">12 Años</span>
-                  <span className="block font-sans text-xs text-gray-500">Gestión Técnica</span>
+                  <span className="block font-sans font-black text-base text-black leading-tight">12 Años</span>
+                  <span className="block font-sans text-xs font-semibold text-gray-800">Gestión Técnica</span>
                 </div>
               </div>
             </motion.div>
