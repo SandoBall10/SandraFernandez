@@ -1,25 +1,65 @@
-import { AgendaEvent, Testimonial, WalkCampaign } from './types';
+import { AgendaEvent, Testimonial, WalkCampaignMeta } from './types';
+import { buildWalkCampaigns } from './lib/walkAssets';
 
 export const CANDIDATE_INFO = {
   name: 'Sandra Fernández',
   tagline: 'Liderazgo, Gestión y Corazón para Nuestro Municipio',
   party: 'País Para Todos',
-  briefBio: 'Sandra Fernández Beltrán es una abogada y política peruana con experiencia en asesoría legal y participación en procesos democráticos de alcance regional. Firme creyente en la renovación política y el liderazgo local, Sandra postuló como candidata al Congreso de la República por la región Áncash, enfocando sus propuestas en el desarrollo y representación de comunidades como Nuevo Chimbote. Con una visión orientada al servicio legal y la fiscalización, busca contribuir desde el ámbito profesional a la modernización institucional y el fortalecimiento de la transparencia en la gestión pública peruana.',
-  experience: [
-    { year: '2019 - 2020', role: 'Gestión de Procesos Administrativo-Electorales', desc: 'Manejo y subsanación de expedientes ante los organismos del sistema electoral peruano (JNE y ONPE), asumiendo la representación legal frente a las resoluciones institucionales del periodo fiscalizado 2020.' },
-    { year: '2019 - 2020', role: 'Campaña Electoral y Postulación Parlamentaria', desc: 'Lideró mítines, debates públicos y formulación de propuestas legislativas enfocadas en la reforma institucional, fiscalización regional y seguridad en la provincia del Santa y Nuevo Chimbote.' },
-    { year: '2014 - Presente', role: 'Asesoría Jurídica e Intervención Legal Privada', desc: 'Litigación oral, patrocinio de casos en el ámbito penal y civil, y consultoría jurídica para personas naturales y colectivos locales en la región Áncash.' }
+  perfil: {
+    nombre: 'Sandra Verónica Fernández Beltrán',
+    titulo: 'Trayectoria, Preparación y Compromiso Real',
+    bio: 'Según el Certificado Único Laboral del MTPE, es abogada de la Universidad Nacional Pedro Ruiz Gallo y bachiller en Derecho de la Universidad San Pedro (fuente SUNEDU). Su experiencia laboral registrada en planillas electrónicas incluye municipalidades distritales y provinciales de la región Áncash, entre otras entidades del sector público.',
+    estadisticas: [
+      { valor: '0', etiqueta: 'ANTECEDENTES REGISTRADOS' },
+      { valor: '2', etiqueta: 'TÍTULOS SUNEDU' },
+      { valor: '3', etiqueta: 'MUNICIPALIDADES' },
+      { valor: '10', etiqueta: 'REGISTROS EN CUL' },
+    ],
+  },
+  educacion: [
+    {
+      grado: 'Abogada',
+      detalle: 'Universidad Nacional Pedro Ruiz Gallo',
+      fuente: 'SUNEDU',
+    },
+    {
+      grado: 'Bachiller en Derecho',
+      detalle: 'Universidad San Pedro',
+      fuente: 'SUNEDU',
+    },
   ],
-  education: [
-    { degree: 'Estudios de Postgrado (Derecho)', university: 'Egresada en formación avanzada dentro del ámbito jurídico penal o procesal.' },
-    { degree: 'Pregrado en Derecho y Ciencias Políticas', university: 'Licenciada y abogada colegiada con mención en ciencias jurídicas y constitucionales.' }
+  experiencia: [
+    {
+      periodo: '10/10/2022 – 07/02/2023',
+      entidad: 'Municipalidad Distrital de Samanco',
+    },
+    {
+      periodo: '01/10/2017 – 31/10/2018',
+      entidad: 'Municipalidad Distrital de Quillo',
+    },
+    {
+      periodo: '01/09/2017 – 31/10/2017',
+      entidad: 'Municipalidad Provincial de Casma',
+    },
+    {
+      periodo: '01/04/2016 – 31/12/2016',
+      entidad: 'Municipalidad Distrital de Quillo',
+    },
+    {
+      periodo: '26/01/2021 – 02/03/2021',
+      entidad: 'Dirección de Red de Salud Huaylas Norte',
+    },
   ],
-  stats: [
-    { label: 'Barrios Escuchados', value: '50' },
-    { label: 'Propuestas de Gobierno', value: '4' },
-    { label: 'Años de Servicio Público', value: '11+' },
-    { label: 'Compromiso de Gobierno', value: '100%' }
-  ]
+  auditoria: {
+    certificado: '20269107026',
+    emision: '07 de junio de 2026',
+    vigencia: '3 meses',
+    antecedentes: [
+      { tipo: 'Policiales', fuente: 'PNP', resultado: 'No registra antecedentes.' },
+      { tipo: 'Judiciales', fuente: 'INPE', resultado: 'No registra antecedentes.' },
+      { tipo: 'Penales', fuente: 'Poder Judicial', resultado: 'No registra antecedentes.' },
+    ],
+  },
 };
 
 export const AGENDA_EVENTS: AgendaEvent[] = [
@@ -85,86 +125,56 @@ export const TESTIMONIALS: Testimonial[] = [
   }
 ];
 
-export const WALKS_CAMPAIGN: WalkCampaign[] = [
+const WALKS_CAMPAIGN_META: WalkCampaignMeta[] = [
   {
-    id: 'walk-1',
-    title: 'Caminata Barrio San José',
-    shortDescription: 'Inspección de las luminarias comunitarias rotas y diálogo directo sobre la inseguridad local.',
-    fullDescription: 'Durante este valioso recorrido nocturno por el sector central del Barrio San José, Sandra Fernández conversó con más de 80 vecinos, identificando puntos ciegos de iluminación pública y asumiendo el compromiso prioritario de conectar el vecindario al nuevo sistema centralizado de alarmas comunitarias de País Para Todos.',
-    location: 'Barrio San José (Plaza Central y Calles Aledañas)',
-    date: '04 de Junio, 2026',
-    backgroundImage: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=600',
-    videoUrl: '/videos/walk-1.mp4',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800'
-    ],
+    id: 'walk-homenaje-madres',
+    slug: 'homenaje-a-las-madres',
+    title: 'Homenaje a las Madres de Nuevo Chimbote',
+    shortDescription:
+      'Momentos que nos llenan el alma. Así se vivió el gran homenaje a las madres de Nuevo Chimbote.',
+    fullDescription:
+      'Momentos que nos llenan el alma. Así se vivió el gran homenaje a las madres de Nuevo Chimbote. Compartimos sonrisas, premios, baile y el compromiso firme de trabajar por nuestro distrito. ¡Gracias a todas las mamitas que nos acompañaron y confiaron en este gran proyecto! Desliza para ver los mejores momentos del evento.',
+    location: 'Nuevo Chimbote',
+    date: 'Homenaje comunitario',
     achievements: [
-      'Identificación de 18 puntos ciegos sin alumbrado.',
-      'Pre-registro de 35 hogares para alertas integradas por WhatsApp.',
-      'Acuerdo de conformación del comité preventivo de seguridad vecinal.'
-    ]
+      'Sonrisas, premios y baile con las familias del distrito.',
+      'Reconocimiento y homenaje a las madres de Nuevo Chimbote.',
+      'Compromiso firme de seguir trabajando por nuestro distrito.',
+    ],
   },
   {
-    id: 'walk-2',
-    title: 'Recorrido Comercial Centro',
-    shortDescription: 'Plan de simplificación fiscal para pymes y diálogos con emprendedores del casco urbano.',
-    fullDescription: 'Sandra recorrió la calle comercial principal del centro histórico. Escuchó de manos de los locatarios la urgencia de agilizar los permisos municipales y propuso formalmente su iniciativa "Trámites Cero", eliminando ventanillas inútiles e incentivando el consumo local mediante ferias digitales bimestrales.',
-    location: 'Zona Comercial del Centro Histórico',
-    date: '06 de Junio, 2026',
-    backgroundImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600',
-    videoUrl: '/videos/walk-2.mp4',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800'
-    ],
+    id: 'walk-lomas-del-sur',
+    slug: 'lomas-del-sur',
+    title: 'Visita y planificación en Lomas del Sur',
+    shortDescription:
+      'Seguimos sumando esfuerzos por nuestra gente. En Lomas del Sur planificamos próximas actividades junto a la regidora Lorena.',
+    fullDescription:
+      'Seguimos sumando esfuerzos por nuestra gente. En mi visita a Lomas del Sur, me senté a planificar nuestras próximas actividades y conocer más sobre la zona junto a la regidora Lorena. Qué gran charla compartimos. Escuchar a una madre, mujer luchadora y emprendedora como ella nos motiva a seguir trabajando fuerte por los que más lo necesitan. ¡Haremos un gran equipo!',
+    location: 'Lomas del Sur',
+    date: 'Visita territorial',
     achievements: [
-      'Reunión clave con el sindicato de comerciantes independientes.',
-      'Explicación del plan fiscal de amnistía para licencias de bajo riesgo.',
-      'Suscripción del acta de compromiso "Centro Peatonal Amigable".'
-    ]
+      'Planificación de próximas actividades en la zona.',
+      'Encuentro y diálogo con la regidora Lorena.',
+      'Compromiso de seguir trabajando por quienes más lo necesitan.',
+    ],
   },
   {
-    id: 'walk-3',
-    title: 'Caminata Verde en Parque Río Limpio',
-    shortDescription: 'Diseño conjunto del corredor ecológico municipal con colectivos ambientalistas.',
-    fullDescription: 'Un recorrido de 3 kilómetros a las orillas del río sirvió para mapear la erosión urbana y acordar un plan participativo de reforestación masiva de 20,000 especies nativas si Sandra llega a la alcaldía. Los jóvenes destacaron la necesidad de ciclorrutas seguras bajo iluminación led sostenible.',
-    location: 'Parque Lineal y Ribera del Río Limpio',
-    date: '08 de Junio, 2026',
-    backgroundImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600',
-    videoUrl: '/videos/walk-3.mp4',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=800'
-    ],
+    id: 'walk-san-luis-segunda-etapa',
+    slug: 'San-Luis-Segunda-Etapa',
+    title: 'Escucha comunitaria en San Luis Segunda Etapa',
+    shortDescription:
+      'Las verdaderas necesidades no se leen en un informe, se escuchan de su propia gente.',
+    fullDescription:
+      'Las verdaderas necesidades no se leen en un informe, se escuchan de su propia gente. Agradezco infinitamente a los vecinos de San Luis Segunda Etapa por el espacio para conversar con tanta sinceridad sobre sus urgencias. Tienen mi compromiso: muy pronto estaré de regreso con mi equipo técnico para realizar las examinaciones profundas que se requieren. ¡Pasaremos del diálogo a la acción!',
+    location: 'San Luis Segunda Etapa',
+    date: 'Escucha comunitaria',
     achievements: [
-      'Compromiso de conservación forestal para 15 hectáreas.',
-      'Trazado preliminar de 4.5 kilómetros de senderos peatonales y ciclovías.',
-      'Pacto de apoyo con 8 organizaciones de jóvenes voluntarios ecologistas.'
-    ]
+      'Diálogo sincero con vecinos sobre las urgencias del sector.',
+      'Compromiso de regresar con equipo técnico para evaluaciones profundas.',
+      'Del diálogo a la acción en beneficio de la comunidad.',
+    ],
   },
-  {
-    id: 'walk-4',
-    title: 'Asamblea Juvenil del Sector Norte',
-    shortDescription: 'Planificación de aulas de innovación digital y becas de estudio técnico.',
-    fullDescription: 'Con un foro interactivo de participación directa, Sandra Fernández debatió junto a jóvenes universitarios y egresados los lineamientos para crear el primer "Nodo Digital de Innovación" del Norte, que brindará entrenamiento certificado gratuito en programación e inteligencia artificial orientada al empleo moderno.',
-    location: 'Estación de Juventud y Empleo del Norte',
-    date: '09 de Junio, 2026',
-    backgroundImage: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600',
-    videoUrl: '/videos/walk-4.mp4',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=800'
-    ],
-    achievements: [
-      'Validación de la demanda académica e intereses tecnológicos del sector.',
-      'Alianza voluntaria de capacitación online con empresarios locales.',
-      'Propuesta de habilitación de transporte seguro nocturno para estudiantes.'
-    ]
-  }
 ];
+
+export const WALKS_CAMPAIGN = buildWalkCampaigns(WALKS_CAMPAIGN_META);
 

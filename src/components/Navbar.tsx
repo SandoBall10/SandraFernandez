@@ -49,10 +49,10 @@ export default function Navbar({ onJoinClick }: NavbarProps) {
       className="fixed top-0 left-0 right-0 z-50 flex flex-col"
     >
       {/* Campaign urgent announcement tier */}
-      <div className="bg-black text-[#FFCA00] text-[11px] font-mono py-2 px-4 shadow-inner text-center overflow-hidden whitespace-nowrap z-40 relative flex items-center justify-center space-x-2 w-full">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#FFCA00] animate-ping" />
-        <span className="uppercase tracking-widest font-semibold text-center leading-none">
-          ¡NUEVO EVENTO CONFIRMADO EN POLIDEPORTIVO SAN MARTÍN ESTE 12 DE JUNIO A LAS 18:00! SÚMATE HOY.
+      <div className="bg-black text-[#FFCA00] text-[11px] font-mono py-2 px-4 shadow-inner text-center z-40 relative flex items-center justify-center gap-2 w-full">
+        <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-[#FFCA00] animate-ping" />
+        <span className="uppercase tracking-widest font-semibold text-center leading-snug max-w-4xl">
+          Muy pronto te mostraremos los próximos eventos para que nos acompañes. ¡Mantente atento!
         </span>
       </div>
 

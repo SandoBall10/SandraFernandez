@@ -16,17 +16,22 @@ export interface Testimonial {
   avatar: string;
 }
 
-export interface WalkCampaign {
+export interface WalkCampaignMeta {
   id: string;
+  slug: string;
   title: string;
   shortDescription: string;
   fullDescription: string;
   location: string;
   date: string;
+  achievements: string[];
+  videoUrl?: string;
+}
+
+export interface WalkCampaign extends WalkCampaignMeta {
   backgroundImage: string;
+  galleryImages: string[];
   videoUrl: string;
   videoPoster?: string;
-  galleryImages: string[];
-  achievements: string[];
 }
 

@@ -61,18 +61,21 @@ function FlipDigit({ digit }: FlipCardProps) {
 interface FlipUnitProps {
   value: number;
   label: string;
+  digits?: 1 | 2;
 }
 
-function FlipUnit({ value, label }: FlipUnitProps) {
-  const paddedValue = value.toString().padStart(2, '0');
-  const d1 = paddedValue[0];
-  const d2 = paddedValue[1];
+function FlipUnit({ value, label, digits = 2 }: FlipUnitProps) {
+  const paddedValue = value.toString().padStart(digits, '0');
+  const digitChars = paddedValue.split('');
 
   return (
     <div className="flex flex-col items-center mx-[1.5px]">
       <div className="flex space-x-0.5">
-        <FlipDigit digit={d1} />
-        <FlipDigit digit={d2} />
+        {digitChars.map((digit, index) => (
+          <React.Fragment key={`${label}-${index}`}>
+            <FlipDigit digit={digit} />
+          </React.Fragment>
+        ))}
       </div>
       <span className="text-[7px] font-mono font-bold text-zinc-500 mt-0.5 uppercase tracking-wider">
         {label}
@@ -81,38 +84,58 @@ function FlipUnit({ value, label }: FlipUnitProps) {
   );
 }
 
+function calculateElectionCountdown(targetDate: Date) {
+  const now = new Date();
+
+  if (targetDate.getTime() <= now.getTime()) {
+    return { months: 0, weeks: 0, days: 0, hours: 0 };
+  }
+
+  let cursor = new Date(now);
+  let months = 0;
+
+  while (true) {
+    const nextMonth = new Date(cursor);
+    nextMonth.setMonth(nextMonth.getMonth() + 1);
+    if (nextMonth > targetDate) break;
+    months += 1;
+    cursor = nextMonth;
+  }
+
+  let remainingMs = targetDate.getTime() - cursor.getTime();
+  const weekMs = 7 * 24 * 60 * 60 * 1000;
+  const dayMs = 24 * 60 * 60 * 1000;
+  const hourMs = 60 * 60 * 1000;
+
+  const weeks = Math.floor(remainingMs / weekMs);
+  remainingMs -= weeks * weekMs;
+
+  const days = Math.floor(remainingMs / dayMs);
+  remainingMs -= days * dayMs;
+
+  const hours = Math.floor(remainingMs / hourMs);
+
+  return { months, weeks, days, hours };
+}
+
 export default function FlipClock() {
   const [timeLeft, setTimeLeft] = useState({
+    months: 0,
+    weeks: 0,
     days: 0,
     hours: 0,
-    minutes: 0,
-    seconds: 0,
   });
 
   useEffect(() => {
-    // Elections Target Date: October 25, 2026, 08:00:00 (Standard Local Elections Morning)
-    const targetDate = new Date('2026-10-25T08:00:00').getTime();
+    // Elecciones: 4 de octubre de 2026, inicio del día (hora local)
+    const targetDate = new Date(2026, 9, 4, 0, 0, 0);
 
     const updateTimer = () => {
-      // In Gemini AI Studio preview sandbox environment, we calculate against the simulated current local time: 2026-06-10T13:51:58Z
-      const now = Date.now();
-      const difference = targetDate - now;
-
-      if (difference <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      setTimeLeft({ days, hours, minutes, seconds });
+      setTimeLeft(calculateElectionCountdown(targetDate));
     };
 
     updateTimer();
-    const interval = setInterval(updateTimer, 1000);
+    const interval = setInterval(updateTimer, 60_000);
 
     return () => clearInterval(interval);
   }, []);
@@ -128,13 +151,13 @@ export default function FlipClock() {
       </div>
 
       <div className="flex items-center">
+        <FlipUnit value={timeLeft.months} label="Mes" digits={1} />
+        <span className="text-zinc-600 font-bold text-[10px] mx-[1px] -mt-2.5 animate-pulse">:</span>
+        <FlipUnit value={timeLeft.weeks} label="Sem" />
+        <span className="text-zinc-600 font-bold text-[10px] mx-[1px] -mt-2.5 animate-pulse">:</span>
         <FlipUnit value={timeLeft.days} label="Días" />
         <span className="text-zinc-600 font-bold text-[10px] mx-[1px] -mt-2.5 animate-pulse">:</span>
         <FlipUnit value={timeLeft.hours} label="Hrs" />
-        <span className="text-zinc-600 font-bold text-[10px] mx-[1px] -mt-2.5 animate-pulse">:</span>
-        <FlipUnit value={timeLeft.minutes} label="Min" />
-        <span className="text-zinc-600 font-bold text-[10px] mx-[1px] -mt-2.5 animate-pulse">:</span>
-        <FlipUnit value={timeLeft.seconds} label="Seg" />
       </div>
     </div>
   );

@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, Download, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Download, Users, ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react';
 import { downloadPlanGobierno } from '../lib/downloadPlanGobierno';
 
-const heroPhotoModules = import.meta.glob<string>('../assets/*.jpg', {
+const heroPhotoModules = import.meta.glob<string>('../assets/hero/*.jpg', {
   eager: true,
   import: 'default',
 });
 
 const CANDIDATE_PHOTOS = Object.keys(heroPhotoModules)
-  .filter((path) => /\/(\d+)\.jpg$/.test(path))
+  .filter((path) => /\/hero\/(\d+)\.jpg$/.test(path.replace(/\\/g, '/')))
   .sort((a, b) => {
-    const numA = Number(a.match(/\/(\d+)\.jpg$/)?.[1] ?? 0);
-    const numB = Number(b.match(/\/(\d+)\.jpg$/)?.[1] ?? 0);
+    const numA = Number(a.replace(/\\/g, '/').match(/\/hero\/(\d+)\.jpg$/)?.[1] ?? 0);
+    const numB = Number(b.replace(/\\/g, '/').match(/\/hero\/(\d+)\.jpg$/)?.[1] ?? 0);
     return numA - numB;
   })
   .map((path) => heroPhotoModules[path]);
@@ -129,13 +129,11 @@ export default function Hero({ onJoinClick }: HeroProps) {
               </div>
               <div className="flex items-center gap-2.5 bg-[#FFCA00]/25 backdrop-blur-sm border border-[#FFCA00]/40 rounded-xl px-3 py-2.5 shadow-sm">
                 <div className="bg-[#FFCA00] text-black p-2 rounded-lg shrink-0">
-                  <svg className="w-[18px] h-[18px] text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+                  <ShieldCheck size={18} className="text-black" />
                 </div>
                 <div>
-                  <span className="block font-sans font-black text-base text-black leading-tight">Cero</span>
-                  <span className="block font-sans text-xs font-semibold text-gray-800">Corrupción</span>
+                  <span className="block font-sans font-black text-base text-black leading-tight">Total</span>
+                  <span className="block font-sans text-xs font-semibold text-gray-800">Transparencia</span>
                 </div>
               </div>
               <div className="flex items-center gap-2.5 bg-[#FFCA00]/25 backdrop-blur-sm border border-[#FFCA00]/40 rounded-xl px-3 py-2.5 shadow-sm">
