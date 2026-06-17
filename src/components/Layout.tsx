@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import BioSection from './BioSection';
 import PlanGobierno from './PlanGobierno';
-import AgendaSlider from './AgendaSlider';
+import VideosSection from './VideosSection';
 import WalksCarousel from './WalksCarousel';
 import JoinForm from './JoinForm';
 import Footer from './Footer';
@@ -21,6 +21,10 @@ export default function Layout() {
   const route = getRouteByPath(location.pathname);
 
   useEffect(() => {
+    if (location.pathname === '/agenda') {
+      navigate('/videos', { replace: true });
+      return;
+    }
     if (!KNOWN_PATHS.has(location.pathname)) {
       navigate('/', { replace: true });
       return;
@@ -42,7 +46,7 @@ export default function Layout() {
           <BioSection />
           <PlanGobierno />
           <WalksCarousel />
-          <AgendaSlider />
+          <VideosSection />
         </div>
       </div>
 

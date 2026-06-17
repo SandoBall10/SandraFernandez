@@ -1,4 +1,4 @@
-import { AgendaEvent, Testimonial, WalkCampaignMeta } from './types';
+import { CampaignVideo, Testimonial, WalkCampaignMeta } from './types';
 import { buildWalkCampaigns } from './lib/walkAssets';
 
 export const CANDIDATE_INFO = {
@@ -62,43 +62,27 @@ export const CANDIDATE_INFO = {
   },
 };
 
-export const AGENDA_EVENTS: AgendaEvent[] = [
+/**
+ * Añade videos pegando la URL de YouTube, TikTok o Facebook.
+ *
+ * Ejemplo:
+ * {
+ *   id: 'vid-1',
+ *   url: 'https://www.youtube.com/watch?v=XXXXXXXX',
+ *   title: 'Caminata en Lomas del Sur',
+ *   description: 'Recorrido con vecinos del sector.',
+ *   tag: 'Caminata',
+ * },
+ */
+export const CAMPAIGN_VIDEOS: CampaignVideo[] = [
   {
-    id: 'evt-1',
-    date: '12 Jun',
-    time: '18:00',
-    title: 'Gran Encuentro Ciudadano por la Seguridad',
-    location: 'Polideportivo San Martín',
-    description: 'Presentación oficial de nuestro plan de seguridad comunitaria. Diálogo abierto con vecinas y vecinos.',
-    tag: 'Conversatorio'
+    id: 'vid-featured-1',
+    url: 'https://youtu.be/_HtpRQgGn4o',
+    title: 'El mensaje de Sandra Fernández',
+    description:
+      'Conoce la visión de País Para Todos: una campaña cercana, con escucha vecinal y propuestas concretas para un mejor Nuevo Chimbote.',
+    tag: 'Mensaje',
   },
-  {
-    id: 'evt-2',
-    date: '15 Jun',
-    time: '10:00',
-    title: 'Caminata y Siembra de Árboles Nativos',
-    location: 'Parque Lineal El Bosque',
-    description: 'Acto simbólico de reforestación urbana junto a colectivos juveniles y ambientalistas locales.',
-    tag: 'Visita Barrio'
-  },
-  {
-    id: 'evt-3',
-    date: '19 Jun',
-    time: '19:30',
-    title: 'Debate de Candidatos a la Alcaldía',
-    location: 'Teatro Municipal de la Ciudad',
-    description: 'Sandra Fernández expone propuestas técnicas de desarrollo económico frente a los demás candidatos.',
-    tag: 'Debate'
-  },
-  {
-    id: 'evt-4',
-    date: '22 Jun',
-    time: '17:00',
-    title: 'Presentación del Programa de Becas e Innovación',
-    location: 'Auditorio Tecnológico del Norte',
-    description: 'Lanzamiento de las becas "Futuro Digital" para jóvenes emprendedores y estudiantes de institutos.',
-    tag: 'Conferencia'
-  }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

@@ -1,11 +1,12 @@
-export interface AgendaEvent {
+export interface CampaignVideo {
   id: string;
-  date: string;
-  time: string;
+  /** URL de YouTube, TikTok o Facebook */
+  url: string;
   title: string;
-  location: string;
-  description: string;
-  tag: 'Mitin' | 'Debate' | 'Conversatorio' | 'Visita Barrio' | 'Conferencia';
+  description?: string;
+  tag?: 'Caminata' | 'Mensaje' | 'Evento' | 'Entrevista' | 'Otro';
+  /** Miniatura opcional si la plataforma no la provee (p. ej. TikTok) */
+  posterUrl?: string;
 }
 
 export interface Testimonial {

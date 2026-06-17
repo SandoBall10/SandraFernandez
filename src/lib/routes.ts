@@ -17,7 +17,7 @@ export const SITE_ROUTES: SiteRoute[] = [
     label: 'Inicio',
     title: 'Sandra Fernández | País Para Todos — Candidata a la Alcaldía',
     description:
-      'Conoce a Sandra Fernández, su plan de gobierno, caminatas con vecinos y agenda de campaña para Nuevo Chimbote. País Para Todos.',
+      'Conoce a Sandra Fernández, su plan de gobierno, caminatas con vecinos y videos de campaña para Nuevo Chimbote. País Para Todos.',
     sitemapPriority: 1.0,
     sitemapChangefreq: 'weekly',
   },
@@ -52,12 +52,12 @@ export const SITE_ROUTES: SiteRoute[] = [
     sitemapChangefreq: 'weekly',
   },
   {
-    path: '/agenda',
-    sectionId: 'agenda',
-    label: 'Agenda',
-    title: 'Agenda de Encuentros | Campaña Sandra Fernández',
+    path: '/videos',
+    sectionId: 'videos',
+    label: 'Videos',
+    title: 'Videos de la Campaña | Sandra Fernández',
     description:
-      'Eventos, mitines y actividades de la campaña País Para Todos. Acompaña a Sandra Fernández en Nuevo Chimbote.',
+      'Caminatas, mensajes y actividades de la campaña País Para Todos en video. Sandra Fernández en Nuevo Chimbote.',
     sitemapPriority: 0.8,
     sitemapChangefreq: 'weekly',
   },
@@ -74,7 +74,7 @@ export const SITE_ROUTES: SiteRoute[] = [
 ];
 
 export const NAV_ROUTES = SITE_ROUTES.filter((route) =>
-  ['/', '/sandra', '/plan-gobierno', '/agenda'].includes(route.path)
+  ['/', '/sandra', '/plan-gobierno', '/videos'].includes(route.path)
 );
 
 export function getRouteByPath(pathname: string): SiteRoute {

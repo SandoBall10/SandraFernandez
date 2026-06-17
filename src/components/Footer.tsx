@@ -53,8 +53,8 @@ export default function Footer() {
                   >
                     {route.path === '/sandra'
                       ? 'Sandra Fernández'
-                      : route.path === '/agenda'
-                        ? 'Agenda de Encuentros'
+                      : route.path === '/videos'
+                        ? 'Videos de la Campaña'
                         : route.label}
                   </Link>
                 </li>
