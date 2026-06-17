@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { AGENDA_EVENTS } from '../data';
 import { Calendar, MapPin, Clock, ChevronLeft, ChevronRight, Share2, Sparkles, Filter } from 'lucide-react';
 
 export default function AgendaSlider() {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedTag, setSelectedTag] = useState<string>('Todos');
 
@@ -174,12 +176,7 @@ export default function AgendaSlider() {
                         <span className="hidden sm:inline">Compartir</span>
                       </button>
                       <button
-                        onClick={() => {
-                          const element = document.getElementById('unete');
-                          if (element) {
-                            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                          }
-                        }}
+                        onClick={() => navigate('/unete')}
                         className="bg-[#FFCA00] text-black border-2 border-black font-sans font-extrabold text-xs px-5 py-3 rounded-xl hover:bg-black hover:text-[#FFCA00] hover:shadow-[0_4px_12px_rgba(255,202,0,0.3)] transition-all cursor-pointer focus:outline-none flex items-center gap-1.5"
                       >
                         <Sparkles size={12} />

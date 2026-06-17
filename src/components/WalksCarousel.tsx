@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { WALKS_CAMPAIGN } from '../data';
@@ -30,6 +31,7 @@ function dateLabel(date: string) {
 }
 
 export default function WalksCarousel() {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedWalk, setSelectedWalk] = useState<WalkCampaign | null>(null);
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0);
@@ -382,7 +384,7 @@ export default function WalksCarousel() {
                       type="button"
                       onClick={() => {
                         closeWalkModal();
-                        document.getElementById('unete')?.scrollIntoView({ behavior: 'smooth' });
+                        navigate('/unete');
                       }}
                       className="w-full bg-[#FFCA00] text-black font-extrabold text-xs px-4 py-2.5 rounded-xl hover:bg-[#e6b800] transition-all cursor-pointer flex items-center justify-center gap-1.5"
                     >

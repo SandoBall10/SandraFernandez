@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logoImg from '@/src/assets/logo.png';
 import ztLogoImg from '@/src/assets/zt.png';
+import { SITE_ROUTES } from '../lib/routes';
 
 const ZENTRITSOFT_INSTAGRAM = 'https://www.instagram.com/zentritsoft/';
 const TIKTOK_URL = 'https://www.tiktok.com/@laabogadadelpuebloof?is_from_webapp=1&sender_device=pc';
@@ -43,18 +45,20 @@ export default function Footer() {
               Campaña
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-gray-400">
-              <li>
-                <a href="#inicio" className="hover:text-[#FFCA00] transition-colors leading-none">Inicio</a>
-              </li>
-              <li>
-                <a href="#nosotros" className="hover:text-[#FFCA00] transition-colors leading-none">Sandra Fernández</a>
-              </li>
-              <li>
-                <a href="#plan" className="hover:text-[#FFCA00] transition-colors leading-none">Plan de Gobierno</a>
-              </li>
-              <li>
-                <a href="#agenda" className="hover:text-[#FFCA00] transition-colors leading-none">Agenda de Encuentros</a>
-              </li>
+              {SITE_ROUTES.map((route) => (
+                <li key={route.path}>
+                  <Link
+                    to={route.path}
+                    className="hover:text-[#FFCA00] transition-colors leading-none"
+                  >
+                    {route.path === '/sandra'
+                      ? 'Sandra Fernández'
+                      : route.path === '/agenda'
+                        ? 'Agenda de Encuentros'
+                        : route.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

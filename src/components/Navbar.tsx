@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import FlipClock from './FlipClock';
 import logoImg from '@/src/assets/logo.png';
+import { NAV_ROUTES } from '../lib/routes';
+import { scrollToSectionById } from '../lib/scrollToSection';
 
-interface NavbarProps {
-  onJoinClick: () => void;
-}
-
-export default function Navbar({ onJoinClick }: NavbarProps) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,29 +20,14 @@ export default function Navbar({ onJoinClick }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const goToRoute = (path: string, sectionId: string) => {
     setIsOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80; // height of footer/navbar
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+    if (location.pathname === path) {
+      scrollToSectionById(sectionId);
+    } else {
+      navigate(path);
     }
   };
-
-  const navLinks = [
-    { label: 'Inicio', target: 'inicio' },
-    { label: 'Sandra', target: 'nosotros' },
-    { label: 'Plan de Gobierno', target: 'plan' },
-    { label: 'Agenda', target: 'agenda' },
-  ];
 
   return (
     <header
@@ -67,11 +53,10 @@ export default function Navbar({ onJoinClick }: NavbarProps) {
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
           <button
-            onClick={() => scrollToSection('inicio')}
+            onClick={() => goToRoute('/', 'inicio')}
             className="flex items-center space-x-3 group text-left focus:outline-none"
             id="brand-logo-btn"
           >
-            {/* Actual custom Logo of "País Para Todos" with curving road and brand elements */}
             <div className="relative w-11 h-11 flex items-center justify-center rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300">
               <img
                 src={logoImg}
@@ -91,12 +76,12 @@ export default function Navbar({ onJoinClick }: NavbarProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" id="desktop-nav">
-            {navLinks.map((link) => (
+            {NAV_ROUTES.map((link) => (
               <button
-                key={link.target}
-                onClick={() => scrollToSection(link.target)}
+                key={link.path}
+                onClick={() => goToRoute(link.path, link.sectionId)}
                 className="font-sans text-sm font-medium text-gray-700 hover:text-black transition-colors duration-200 relative py-1 group focus:outline-none"
-                id={`nav-${link.target}`}
+                id={`nav-${link.sectionId}`}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFCA00] transition-all duration-300 group-hover:w-full" />
@@ -130,12 +115,12 @@ export default function Navbar({ onJoinClick }: NavbarProps) {
           className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-xl px-4 py-6 md:hidden animate-fade-in"
         >
           <div className="flex flex-col space-y-4">
-            {navLinks.map((link) => (
+            {NAV_ROUTES.map((link) => (
               <button
-                key={link.target}
-                onClick={() => scrollToSection(link.target)}
+                key={link.path}
+                onClick={() => goToRoute(link.path, link.sectionId)}
                 className="font-sans text-base font-semibold text-gray-800 hover:text-[#FFCA00] text-left py-2 border-b border-gray-50 focus:outline-none"
-                id={`nav-mob-${link.target}`}
+                id={`nav-mob-${link.sectionId}`}
               >
                 {link.label}
               </button>
