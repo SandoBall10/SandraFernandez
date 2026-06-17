@@ -75,7 +75,7 @@ export default function RoadScrollBackground() {
         <img
           src={fondoImg}
           alt=""
-          className="h-full w-auto min-w-[min(58vw,380px)] max-w-none object-cover object-bottom opacity-[0.48] mix-blend-multiply will-change-transform"
+          className="h-full w-auto min-w-[min(58vw,380px)] max-w-none object-cover object-bottom opacity-[0.28] mix-blend-multiply will-change-transform"
           style={{
             transform: `translateY(-${roadShift}%) scale(${roadScale})`,
             transformOrigin: 'center bottom',
@@ -88,7 +88,7 @@ export default function RoadScrollBackground() {
         className="absolute left-1/2 bottom-[16%] -translate-x-1/2 text-center z-20"
         style={{ opacity: messageOpacity }}
       >
-        <p className="font-mono text-xs sm:text-sm font-bold uppercase tracking-[0.4em] text-gray-500">
+        <p className="font-mono text-xs sm:text-sm font-bold uppercase tracking-[0.4em] text-gray-700 drop-shadow-sm">
           País Para Todos
         </p>
         <div className="mt-2.5 mx-auto w-10 h-0.5 bg-[#FFCA00]/70 rounded-full" />

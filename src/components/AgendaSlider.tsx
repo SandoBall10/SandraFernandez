@@ -53,14 +53,14 @@ export default function AgendaSlider() {
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
-          <div className="text-left max-w-2xl space-y-3">
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+          <div className="text-left max-w-2xl space-y-3 relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-6 border border-gray-200 shadow-sm">
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-gray-900 bg-gray-200 border border-gray-300 px-3 py-1 rounded-full">
               Agenda Electoral
             </span>
             <h2 className="font-sans font-black text-3xl sm:text-4xl text-gray-900 tracking-tight" id="agenda-header">
               Próximos Eventos y Encuentros Vecinales
             </h2>
-            <p className="font-sans text-sm sm:text-base text-gray-600">
+            <p className="font-sans text-sm sm:text-base text-gray-800 font-medium leading-relaxed">
               Queremos escucharte de primera mano. Revisa nuestra agenda e inscríbete para acompañarnos en tu sector o barrio.
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function AgendaSlider() {
 
         {/* Filter Pills Tag Row */}
         <div className="flex flex-wrap gap-2 items-center mb-10 pb-2 border-b border-gray-200/50" id="agenda-filters">
-          <span className="text-xs font-sans font-bold text-gray-400 mr-2 flex items-center gap-1">
+          <span className="text-xs font-sans font-bold text-gray-700 mr-2 flex items-center gap-1">
             <Filter size={12} /> Filtrar por:
           </span>
           {tags.map((tag) => (
@@ -100,7 +100,7 @@ export default function AgendaSlider() {
               className={`font-sans text-xs font-bold py-2 px-4 rounded-full border transition-all cursor-pointer focus:outline-none ${
                 selectedTag === tag
                   ? 'bg-black text-white border-black shadow-xs'
-                  : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400'
+                  : 'bg-white text-gray-800 border-gray-300 hover:border-gray-500'
               }`}
             >
               {tag}
@@ -143,7 +143,7 @@ export default function AgendaSlider() {
                       <span className="font-mono text-[10px] font-bold text-black bg-[#FFCA00] border border-black px-2.5 py-0.5 rounded uppercase tracking-wider">
                         {currentEvent.tag}
                       </span>
-                      <span className="font-mono text-[10px] text-gray-400 font-bold tracking-widest uppercase">
+                      <span className="font-mono text-[10px] text-gray-600 font-bold tracking-widest uppercase">
                         Confirmado
                       </span>
                     </div>
@@ -189,7 +189,7 @@ export default function AgendaSlider() {
               </motion.div>
             ) : (
               <div className="bg-white rounded-2xl border-2 border-dashed border-gray-300 p-12 text-center" id="agenda-empty">
-                <p className="font-sans text-base text-gray-500 font-medium">
+                <p className="font-sans text-base text-gray-700 font-medium">
                   No hay eventos programados en este momento bajo la categoría "{selectedTag}".
                 </p>
                 <button

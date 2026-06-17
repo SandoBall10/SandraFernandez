@@ -79,7 +79,7 @@ export default function Hero({ onJoinClick }: HeroProps) {
                   <span className="absolute left-0 bottom-1 w-full h-3 bg-[#FFCA00] -z-10 transform -rotate-1" />
                 </span>
               </h1>
-              <p className="font-sans font-medium text-lg sm:text-xl text-gray-600 max-w-xl" id="hero-tagline">
+              <p className="font-sans font-medium text-lg sm:text-xl text-gray-800 max-w-xl" id="hero-tagline">
                 Un plan real, técnico y con rostro humano para devolverle la tranquilidad y prosperidad a todas las familias de nuestro municipio.
               </p>
             </motion.div>
@@ -228,7 +228,7 @@ export default function Hero({ onJoinClick }: HeroProps) {
                     <span className="block font-sans font-black text-sm text-black uppercase tracking-wider leading-none">
                       Sandra Fernández
                     </span>
-                    <span className="block font-mono text-[10px] text-gray-500 uppercase mt-1">
+                    <span className="block font-mono text-[10px] text-gray-700 uppercase mt-1 font-semibold">
                       Candidata Lista País Para Todos
                     </span>
                   </div>

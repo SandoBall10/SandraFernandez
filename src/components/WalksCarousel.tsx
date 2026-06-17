@@ -109,9 +109,9 @@ export default function WalksCarousel() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Encabezado */}
-        <div className="flex items-end justify-between gap-4 mb-6">
-          <div className="min-w-0">
-            <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+        <div className="flex items-end justify-between gap-4 mb-6 relative z-10">
+          <div className="min-w-0 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-4 border border-gray-200 shadow-sm">
+            <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-gray-900 bg-gray-200 border border-gray-300 px-3 py-1 rounded-full">
               Territorio y Escucha
             </span>
             <h2
@@ -124,7 +124,7 @@ export default function WalksCarousel() {
 
           {hasMultipleWalks && (
             <div className="flex items-center gap-2 shrink-0" id="walks-arrow-controls">
-              <span className="font-mono text-xs text-gray-400 tabular-nums mr-1">
+              <span className="font-mono text-xs text-gray-600 tabular-nums mr-1 font-semibold">
                 {formatSlideCounter(activeIndex, total)}
               </span>
               <button
@@ -185,7 +185,7 @@ export default function WalksCarousel() {
                     <MapPin size={11} />
                     {locationLabel(activeWalk.location)}
                   </span>
-                  <span className="font-mono text-gray-500 flex items-center gap-1.5">
+                  <span className="font-mono text-gray-700 flex items-center gap-1.5 font-medium">
                     <Calendar size={11} />
                     {dateLabel(activeWalk.date)}
                   </span>
@@ -239,7 +239,7 @@ export default function WalksCarousel() {
                 </div>
                 <span
                   className={`font-sans font-bold text-xs sm:text-sm leading-snug line-clamp-2 ${
-                    isActive ? 'text-gray-900' : 'text-gray-500'
+                    isActive ? 'text-gray-900' : 'text-gray-700'
                   }`}
                 >
                   {walk.title}
@@ -351,7 +351,7 @@ export default function WalksCarousel() {
                       <h3 id="walk-modal-title" className="font-sans font-black text-lg sm:text-xl text-black leading-tight">
                         {selectedWalk.title}
                       </h3>
-                      <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-500">
+                      <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-700 font-medium">
                         <span className="flex items-center gap-1 font-bold text-gray-700">
                           <MapPin size={13} /> {selectedWalk.location}
                         </span>
@@ -376,7 +376,7 @@ export default function WalksCarousel() {
                   </div>
 
                   <div className="shrink-0 px-4 sm:px-5 py-3 border-t border-gray-100 flex flex-col gap-2">
-                    <span className="flex items-center gap-1.5 text-gray-500 text-[11px]">
+                    <span className="flex items-center gap-1.5 text-gray-700 text-[11px] font-medium">
                       <Sparkles size={13} className="text-[#FFCA00]" />
                       País Para Todos
                     </span>

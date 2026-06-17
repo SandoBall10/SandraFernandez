@@ -127,7 +127,7 @@ export default function JoinForm() {
                   </div>
                   <div>
                     <span className="font-sans font-bold text-white block">Súmate como Voluntario</span>
-                    <span className="font-sans text-xs text-gray-400">Ayúdanos a llevar las propuestas a tu propio barrio.</span>
+                    <span className="font-sans text-xs text-zinc-300">Ayúdanos a llevar las propuestas a tu propio barrio.</span>
                   </div>
                 </div>
 
@@ -137,7 +137,7 @@ export default function JoinForm() {
                   </div>
                   <div>
                     <span className="font-sans font-bold text-white block">Actualizaciones Exclusivas</span>
-                    <span className="font-sans text-xs text-gray-400">Recibe las alertas de eventos, debates y noticias directamente en tu móvil.</span>
+                    <span className="font-sans text-xs text-zinc-300">Recibe las alertas de eventos, debates y noticias directamente en tu móvil.</span>
                   </div>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function JoinForm() {
                       <h4 className="font-sans font-black text-xl text-black">
                         Registra tus Datos
                       </h4>
-                      <p className="font-sans text-xs text-gray-500">
+                      <p className="font-sans text-xs text-gray-700 font-medium">
                         Completa los campos para ponernos en contacto contigo en menos de 24 horas.
                       </p>
                     </div>
@@ -220,7 +220,7 @@ export default function JoinForm() {
                           {errors.whatsapp ? (
                             <span className="block font-sans text-xs text-red-500 font-semibold">{errors.whatsapp}</span>
                           ) : (
-                            <span className="block font-sans text-[10px] text-gray-400">Ej. 912 345 678</span>
+                            <span className="block font-sans text-[10px] text-gray-600 font-medium">Ej. 912 345 678</span>
                           )}
                         </div>
 
@@ -330,7 +330,7 @@ export default function JoinForm() {
                           &ldquo;{submittedSummary.volunteerRole}&rdquo;
                         </span>.
                       </p>
-                      <p className="font-sans text-xs text-gray-500 leading-normal pt-2">
+                      <p className="font-sans text-xs text-gray-700 leading-normal pt-2">
                         Solo falta que envíes el mensaje en WhatsApp para completar tu registro desde{' '}
                         <span className="font-semibold text-black">{submittedSummary.barrio}</span>. Un coordinador de{' '}
                         <strong>País Para Todos</strong> te contactará pronto.
@@ -339,7 +339,7 @@ export default function JoinForm() {
 
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="font-mono text-[10px] font-bold text-gray-500 hover:text-black uppercase tracking-widest border border-gray-200 hover:border-gray-400 px-5 py-2.5 rounded-lg bg-white transition-all focus:outline-none cursor-pointer"
+                      className="font-mono text-[10px] font-bold text-gray-700 hover:text-black uppercase tracking-widest border border-gray-300 hover:border-gray-500 px-5 py-2.5 rounded-lg bg-white transition-all focus:outline-none cursor-pointer"
                     >
                       Registrar otro voluntario
                     </button>
