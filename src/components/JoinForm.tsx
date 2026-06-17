@@ -1,14 +1,46 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Loader2, CheckCircle, Send, Users, Phone, MapPin, Sparkles } from 'lucide-react';
+import { Loader2, CheckCircle, Send, Users, Phone, MapPin } from 'lucide-react';
+
+const CAMPAIGN_WHATSAPP = '51912855894';
+
+function buildWhatsAppMessage(data: {
+  name: string;
+  whatsapp: string;
+  barrio: string;
+  volunteerRole: string;
+  proposal: string;
+}) {
+  const lines = [
+    '¡Hola! Quiero unirme al proyecto de Sandra Fernández.',
+    '',
+    `*Nombre:* ${data.name}`,
+    `*WhatsApp:* ${data.whatsapp}`,
+    `*Barrio o sector:* ${data.barrio}`,
+    `*Cómo deseo apoyar:* ${data.volunteerRole}`,
+  ];
+
+  if (data.proposal.trim()) {
+    lines.push(`*Cómo apoyaría / Propuesta:* ${data.proposal.trim()}`);
+  }
+
+  lines.push('', '_Enviado desde la web de campaña País Para Todos_');
+
+  return lines.join('\n');
+}
 
 export default function JoinForm() {
   const [name, setName] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
   const [barrio, setBarrio] = useState('');
   const [volunteerRole, setVolunteerRole] = useState('Difundir Propuestas');
+  const [proposal, setProposal] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submittedSummary, setSubmittedSummary] = useState({
+    barrio: '',
+    volunteerRole: '',
+  });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const validate = () => {
@@ -30,15 +62,25 @@ export default function JoinForm() {
 
     setIsSubmitting(true);
 
-    // Simulate server side database ingestion or API request
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      // Clean states
-      setName('');
-      setWhatsapp('');
-      setBarrio('');
-    }, 2000);
+    const message = buildWhatsAppMessage({
+      name: name.trim(),
+      whatsapp: whatsapp.trim(),
+      barrio: barrio.trim(),
+      volunteerRole,
+      proposal,
+    });
+
+    const whatsappUrl = `https://wa.me/${CAMPAIGN_WHATSAPP}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+    setSubmittedSummary({ barrio: barrio.trim(), volunteerRole });
+    setSubmitted(true);
+    setName('');
+    setWhatsapp('');
+    setBarrio('');
+    setProposal('');
+    setVolunteerRole('Difundir Propuestas');
+    setIsSubmitting(false);
   };
 
   return (
@@ -164,7 +206,7 @@ export default function JoinForm() {
                           </label>
                           <input
                             type="tel"
-                            placeholder="Ej. +34 600 000 000"
+                            placeholder="Ej. 912 345 678"
                             value={whatsapp}
                             onChange={(e) => {
                               setWhatsapp(e.target.value);
@@ -178,7 +220,7 @@ export default function JoinForm() {
                           {errors.whatsapp ? (
                             <span className="block font-sans text-xs text-red-500 font-semibold">{errors.whatsapp}</span>
                           ) : (
-                            <span className="block font-sans text-[10px] text-gray-400">Incluye el código de país</span>
+                            <span className="block font-sans text-[10px] text-gray-400">Ej. 912 345 678</span>
                           )}
                         </div>
 
@@ -226,6 +268,23 @@ export default function JoinForm() {
                         </select>
                       </div>
 
+                      <div className="space-y-1.5">
+                        <label
+                          htmlFor="form-input-proposal"
+                          className="block font-sans text-xs font-black text-black uppercase tracking-wider"
+                        >
+                          ¿Cómo apoyarías o qué propuesta tienes?
+                        </label>
+                        <textarea
+                          id="form-input-proposal"
+                          rows={4}
+                          placeholder="Cuéntanos cómo te gustaría colaborar o comparte una propuesta para tu barrio..."
+                          value={proposal}
+                          onChange={(e) => setProposal(e.target.value)}
+                          className="w-full font-sans text-sm p-3.5 px-4 rounded-xl border-2 border-gray-200 focus:border-black bg-gray-50/55 focus:bg-white text-black focus:outline-none transition-all resize-y min-h-[110px]"
+                        />
+                      </div>
+
                     </div>
 
                     {/* Don Norman's Affordance Submit button */}
@@ -238,7 +297,7 @@ export default function JoinForm() {
                       {isSubmitting ? (
                         <>
                           <Loader2 size={18} className="animate-spin text-black" />
-                          <span>Procesando registro...</span>
+                          <span>Abriendo WhatsApp...</span>
                         </>
                       ) : (
                         <>
@@ -266,13 +325,15 @@ export default function JoinForm() {
                         ¡Gracias por sumarte!
                       </h4>
                       <p className="font-sans text-sm text-gray-600">
-                        Hemos registrado con éxito tu apoyo para la opción:
+                        Tu mensaje se abrió en WhatsApp para el equipo de campaña. Opción seleccionada:
                         <span className="font-sans font-bold text-black border-b-2 border-[#FFCA00] ml-1">
-                          "{volunteerRole}"
+                          &ldquo;{submittedSummary.volunteerRole}&rdquo;
                         </span>.
                       </p>
                       <p className="font-sans text-xs text-gray-500 leading-normal pt-2">
-                        Un coordinador regional de tu sector en <span className="font-semibold text-black">{barrio}</span> se pondrá en contacto contigo por WhatsApp en breve para darte la bienvenida al grupo de trabajo local de <strong>País Para Todos</strong>.
+                        Solo falta que envíes el mensaje en WhatsApp para completar tu registro desde{' '}
+                        <span className="font-semibold text-black">{submittedSummary.barrio}</span>. Un coordinador de{' '}
+                        <strong>País Para Todos</strong> te contactará pronto.
                       </p>
                     </div>
 
