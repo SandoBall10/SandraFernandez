@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import FlipClock from './FlipClock';
-import logoImg from '@/src/assets/logo.png';
+import logoImg from '@/src/assets/logo.webp';
 import { NAV_ROUTES } from '../lib/routes';
 import { scrollToSectionById } from '../lib/scrollToSection';
 
@@ -62,6 +62,9 @@ export default function Navbar() {
                 src={logoImg}
                 alt="Logo País Para Todos"
                 className="w-full h-full object-contain"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <div>

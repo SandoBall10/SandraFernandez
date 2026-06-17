@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Download, BookOpen, Clock, FileText, CheckCircle, Loader2 } from 'lucide-react';
 import { downloadPlanGobierno } from '../lib/downloadPlanGobierno';
+import RevealOnScroll from './RevealOnScroll';
 
 export default function PlanGobierno() {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -19,7 +20,7 @@ export default function PlanGobierno() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Columna izquierda — texto */}
-          <div className="text-left space-y-5 bg-white/90 backdrop-blur-sm border border-gray-200/80 rounded-2xl p-6 sm:p-8 shadow-sm">
+          <RevealOnScroll className="text-left space-y-5 bg-white/90 backdrop-blur-sm border border-gray-200/80 rounded-2xl p-6 sm:p-8 shadow-sm">
             <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-gray-800 bg-[#FFCA00]/30 border border-[#FFCA00]/50 px-3 py-1 rounded-full">
               Documento de Trabajo
             </span>
@@ -32,10 +33,13 @@ export default function PlanGobierno() {
               Nuestra propuesta no es una lista de promesas al azar. Es un documento de planificación pública
               estructurado bajo un riguroso marco de costo-beneficio y metas medibles para transformar Nuevo Chimbote.
             </p>
-          </div>
+          </RevealOnScroll>
 
-          {/* Columna derecha — tarjeta de descarga */}
-          <div className="bg-zinc-900 text-white p-7 sm:p-8 rounded-3xl relative overflow-hidden border border-zinc-800 shadow-xl">
+          <RevealOnScroll
+            className="bg-zinc-900 text-white p-7 sm:p-8 rounded-3xl relative overflow-hidden border border-zinc-800 shadow-xl"
+            delay={0.12}
+            direction="right"
+          >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFCA00]/10 rounded-full blur-2xl pointer-events-none" />
 
             <div className="relative z-10 space-y-6">
@@ -108,7 +112,7 @@ export default function PlanGobierno() {
                 </p>
               </div>
             </div>
-          </div>
+          </RevealOnScroll>
         </div>
       </div>
     </section>

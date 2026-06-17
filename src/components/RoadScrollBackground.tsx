@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import fondoImg from '@/src/assets/fondo.png';
+import fondoImg from '@/src/assets/fondo.webp';
 
 function measureHeaderHeight(): number {
   return document.getElementById('main-header')?.offsetHeight ?? 128;
@@ -75,6 +75,8 @@ export default function RoadScrollBackground() {
         <img
           src={fondoImg}
           alt=""
+          loading="lazy"
+          decoding="async"
           className="h-full w-auto min-w-[min(58vw,380px)] max-w-none object-cover object-bottom opacity-[0.28] mix-blend-multiply will-change-transform"
           style={{
             transform: `translateY(-${roadShift}%) scale(${roadScale})`,

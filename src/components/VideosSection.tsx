@@ -5,6 +5,7 @@ import { Play, X, Video, Filter, ExternalLink, Sparkles } from 'lucide-react';
 import { CAMPAIGN_VIDEOS } from '../data';
 import { CampaignVideo } from '../types';
 import { parseVideoUrl, platformLabel, VideoPlatform } from '../lib/videoEmbed';
+import RevealOnScroll from './RevealOnScroll';
 
 const VIDEO_TAGS = ['Todos', 'Caminata', 'Mensaje', 'Evento', 'Entrevista', 'Otro'] as const;
 
@@ -33,14 +34,7 @@ function buildVideoItems(videos: CampaignVideo[]): VideoItem[] {
 
 function FeaturedVideoShowcase({ video }: { video: VideoItem }) {
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.5 }}
-      className="relative z-10"
-      id="videos-featured"
-    >
+    <RevealOnScroll className="relative z-10" id="videos-featured">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
         {/* Panel de texto */}
         <div className="lg:col-span-4 order-2 lg:order-1 text-left space-y-6">
@@ -129,7 +123,7 @@ function FeaturedVideoShowcase({ video }: { video: VideoItem }) {
           </div>
         </div>
       </div>
-    </motion.article>
+    </RevealOnScroll>
   );
 }
 
@@ -171,7 +165,7 @@ export default function VideosSection() {
     <section id="videos" className="py-20 lg:py-28 bg-transparent relative border-b border-gray-100/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {!isSingleFeatured && (
-          <div className="text-left max-w-2xl space-y-3 relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-6 border border-gray-200 shadow-sm mb-10">
+          <RevealOnScroll className="text-left max-w-2xl space-y-3 relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-6 border border-gray-200 shadow-sm mb-10">
             <span className="font-mono text-xs font-bold uppercase tracking-widest text-gray-900 bg-gray-200 border border-gray-300 px-3 py-1 rounded-full">
               En Video
             </span>
@@ -185,7 +179,7 @@ export default function VideosSection() {
               Caminatas, mensajes y momentos de la campaña. Los videos se cargan al reproducirlos para no
               ralentizar la página.
             </p>
-          </div>
+          </RevealOnScroll>
         )}
 
         {allVideos.length > 1 && availableTags.length > 2 && (

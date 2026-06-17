@@ -1,7 +1,7 @@
 import { WalkCampaign, WalkCampaignMeta } from '../types';
 
 const walkImageModules = import.meta.glob<string>(
-  '../assets/caminatas/**/*.{jpg,jpeg,png,webp}',
+  '../assets/caminatas/**/*.webp',
   { eager: true, import: 'default' }
 );
 
@@ -11,12 +11,12 @@ function normalizePath(path: string) {
 
 function photoSortKey(path: string): number {
   const normalized = normalizePath(path);
-  if (/\/cover\.(jpg|jpeg|png|webp)$/i.test(normalized)) return -1;
+  if (/\/cover\.webp$/i.test(normalized)) return -1;
 
   const fotoMatch = normalized.match(/foto\s*\((\d+)\)/i);
   if (fotoMatch) return Number(fotoMatch[1]);
 
-  const numberedMatch = normalized.match(/\/(\d+)\.(jpg|jpeg|png|webp)$/i);
+  const numberedMatch = normalized.match(/\/(\d+)\.webp$/i);
   if (numberedMatch) return Number(numberedMatch[1]);
 
   return 999;

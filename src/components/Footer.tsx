@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImg from '@/src/assets/logo.png';
-import ztLogoImg from '@/src/assets/zt.png';
+import logoImg from '@/src/assets/logo.webp';
+import ztLogoImg from '@/src/assets/zt.webp';
 import { SITE_ROUTES } from '../lib/routes';
+import RevealOnScroll from './RevealOnScroll';
 
 const ZENTRITSOFT_INSTAGRAM = 'https://www.instagram.com/zentritsoft/';
 const TIKTOK_URL = 'https://www.tiktok.com/@laabogadadelpuebloof?is_from_webapp=1&sender_device=pc';
@@ -12,6 +13,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-16 px-4 relative overflow-hidden" id="main-footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <RevealOnScroll>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 text-left mb-12">
           
           {/* Logo & Manifesto Block - 5 columns */}
@@ -22,6 +24,8 @@ export default function Footer() {
                   src={logoImg}
                   alt="Logo País Para Todos"
                   className="w-full h-full object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div>
@@ -96,8 +100,9 @@ export default function Footer() {
           </div>
 
         </div>
+        </RevealOnScroll>
 
-        {/* Separator and Policy details */}
+        <RevealOnScroll delay={0.1}>
         <div className="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-4" id="footer-copyright-and-terms">
           
           <div className="flex flex-wrap justify-center sm:justify-start gap-4">
@@ -120,11 +125,14 @@ export default function Footer() {
               src={ztLogoImg}
               alt="ZentrIT"
               className="h-7 w-auto object-contain"
+              loading="lazy"
+              decoding="async"
             />
             <span className="font-sans font-bold text-[#14B88A] tracking-tight">zentritsoft</span>
           </a>
 
         </div>
+        </RevealOnScroll>
 
       </div>
     </footer>

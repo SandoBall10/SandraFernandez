@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Loader2, CheckCircle, Send, Users, Phone, MapPin } from 'lucide-react';
+import RevealOnScroll from './RevealOnScroll';
 
 const CAMPAIGN_WHATSAPP = '51912855894';
 
@@ -99,6 +100,7 @@ export default function JoinForm() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <RevealOnScroll>
         <div className="max-w-4xl mx-auto bg-white rounded-3xl border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12">
@@ -351,6 +353,7 @@ export default function JoinForm() {
           </div>
 
         </div>
+        </RevealOnScroll>
 
       </div>
     </section>

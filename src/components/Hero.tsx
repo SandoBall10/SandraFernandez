@@ -3,16 +3,16 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Download, Users, ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react';
 import { downloadPlanGobierno } from '../lib/downloadPlanGobierno';
 
-const heroPhotoModules = import.meta.glob<string>('../assets/hero/*.jpg', {
+const heroPhotoModules = import.meta.glob<string>('../assets/hero/*.webp', {
   eager: true,
   import: 'default',
 });
 
 const CANDIDATE_PHOTOS = Object.keys(heroPhotoModules)
-  .filter((path) => /\/hero\/(\d+)\.jpg$/.test(path.replace(/\\/g, '/')))
+  .filter((path) => /\/hero\/(\d+)\.webp$/.test(path.replace(/\\/g, '/')))
   .sort((a, b) => {
-    const numA = Number(a.replace(/\\/g, '/').match(/\/hero\/(\d+)\.jpg$/)?.[1] ?? 0);
-    const numB = Number(b.replace(/\\/g, '/').match(/\/hero\/(\d+)\.jpg$/)?.[1] ?? 0);
+    const numA = Number(a.replace(/\\/g, '/').match(/\/hero\/(\d+)\.webp$/)?.[1] ?? 0);
+    const numB = Number(b.replace(/\\/g, '/').match(/\/hero\/(\d+)\.webp$/)?.[1] ?? 0);
     return numA - numB;
   })
   .map((path) => heroPhotoModules[path]);
@@ -173,6 +173,9 @@ export default function Hero({ onJoinClick }: HeroProps) {
                       key={currentIdx}
                       src={CANDIDATE_PHOTOS[currentIdx]}
                       alt="Sandra Fernández"
+                      loading={currentIdx === 0 ? 'eager' : 'lazy'}
+                      fetchPriority={currentIdx === 0 ? 'high' : 'auto'}
+                      decoding="async"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}

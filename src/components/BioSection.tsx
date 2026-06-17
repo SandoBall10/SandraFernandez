@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { CANDIDATE_INFO } from '../data';
 import { Award, BookOpen, Briefcase, ShieldCheck } from 'lucide-react';
+import RevealOnScroll from './RevealOnScroll';
 
 const { perfil, educacion, experiencia, auditoria } = CANDIDATE_INFO;
 
@@ -10,7 +11,7 @@ export default function BioSection() {
     <section id="nosotros" className="py-24 bg-transparent border-y border-gray-100/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-3xl mx-auto mb-16 relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl px-6 py-8 border border-gray-200 shadow-sm">
+        <RevealOnScroll className="text-center max-w-3xl mx-auto mb-16 relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl px-6 py-8 border border-gray-200 shadow-sm">
           <span className="font-mono text-xs font-bold uppercase tracking-widest text-gray-900 bg-gray-200 border border-gray-300 px-3 py-1 rounded-full">
             Conoce a la Candidata
           </span>
@@ -21,11 +22,11 @@ export default function BioSection() {
             Información verificada — Certificado Único Laboral MTPE N° {auditoria.certificado}
           </p>
           <div className="mt-2 w-16 h-1 bg-[#FFCA00] mx-auto rounded" />
-        </div>
+        </RevealOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <div className="lg:col-span-7 space-y-8">
+          <RevealOnScroll className="lg:col-span-7 space-y-8" delay={0.08}>
             <div className="bg-white p-8 rounded-2xl border border-gray-300 shadow-sm space-y-6">
               <h3 className="font-sans font-extrabold text-2xl text-black">
                 {perfil.nombre}
@@ -57,11 +58,12 @@ export default function BioSection() {
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4" id="bio-stats">
               {perfil.estadisticas.map((stat, idx) => (
+                <div key={idx}>
+                <RevealOnScroll delay={0.12 + idx * 0.06}>
                 <motion.div
-                  key={idx}
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.2 }}
-                  className="bg-[#FFCA00] p-5 rounded-xl border-2 border-black text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all cursor-default"
+                  className="bg-[#FFCA00] p-5 rounded-xl border-2 border-black text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all cursor-default h-full"
                 >
                   <span className="block font-sans font-black text-3xl text-black">
                     {stat.valor}
@@ -70,11 +72,13 @@ export default function BioSection() {
                     {stat.etiqueta}
                   </span>
                 </motion.div>
+                </RevealOnScroll>
+                </div>
               ))}
             </div>
-          </div>
+          </RevealOnScroll>
 
-          <div className="lg:col-span-5 bg-black text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+          <RevealOnScroll className="lg:col-span-5 bg-black text-white p-8 rounded-2xl shadow-xl relative overflow-hidden" delay={0.16} direction="right">
             <div className="absolute inset-0 bg-radial from-gray-900 via-black to-black opacity-90 z-0" />
             
             <div className="relative z-10 space-y-6">
@@ -128,7 +132,7 @@ export default function BioSection() {
               </div>
 
             </div>
-          </div>
+          </RevealOnScroll>
 
         </div>
 

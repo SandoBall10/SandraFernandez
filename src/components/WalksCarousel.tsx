@@ -15,6 +15,7 @@ import {
   Sparkles,
   ImageIcon,
 } from 'lucide-react';
+import RevealOnScroll from './RevealOnScroll';
 
 const AUTOPLAY_MS = 3000;
 
@@ -109,7 +110,7 @@ export default function WalksCarousel() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Encabezado */}
-        <div className="flex items-end justify-between gap-4 mb-6 relative z-10">
+        <RevealOnScroll className="flex items-end justify-between gap-4 mb-6 relative z-10">
           <div className="min-w-0 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-4 border border-gray-200 shadow-sm">
             <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-gray-900 bg-gray-200 border border-gray-300 px-3 py-1 rounded-full">
               Territorio y Escucha
@@ -145,9 +146,9 @@ export default function WalksCarousel() {
               </button>
             </div>
           )}
-        </div>
+        </RevealOnScroll>
 
-        {/* Tarjeta principal */}
+        <RevealOnScroll delay={0.1}>
         <div
           className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden bg-white shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-gray-100"
           id="walks-carousel-container"
@@ -160,6 +161,8 @@ export default function WalksCarousel() {
                 src={activeWalk.backgroundImage}
                 alt={activeWalk.title}
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, scale: 1.03 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -211,6 +214,7 @@ export default function WalksCarousel() {
             </AnimatePresence>
           </div>
         </div>
+        </RevealOnScroll>
 
         {/* Miniaturas — solo si hay más de una caminata */}
         {hasMultipleWalks && (
@@ -234,6 +238,8 @@ export default function WalksCarousel() {
                     src={walk.backgroundImage}
                     alt=""
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -289,6 +295,8 @@ export default function WalksCarousel() {
                     <img
                       src={selectedWalk.galleryImages[activeGalleryIndex]}
                       alt={`Foto ${activeGalleryIndex + 1} — ${selectedWalk.title}`}
+                      loading="eager"
+                      decoding="async"
                       className="w-full h-auto max-h-[38dvh] md:max-h-[min(48dvh,520px)] object-contain"
                     />
 
@@ -336,7 +344,13 @@ export default function WalksCarousel() {
                             aria-label={`Ver foto ${gIdx + 1}`}
                             aria-current={activeGalleryIndex === gIdx ? 'true' : undefined}
                           >
-                            <img src={img} alt="" className="w-full h-full object-cover" />
+                            <img
+                              src={img}
+                              alt=""
+                              loading="lazy"
+                              decoding="async"
+                              className="w-full h-full object-cover"
+                            />
                           </button>
                         ))}
                       </div>

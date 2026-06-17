@@ -1,0 +1,1421 @@
+{
+  "generatedAt": "2026-06-17T18:16:33.112Z",
+  "summary": {
+    "imagesScanned": 92,
+    "imagesOver150KB": 73,
+    "converted": 92,
+    "skipped": 0,
+    "duplicates": 0,
+    "unused": 0,
+    "orphanAssets": [],
+    "beforeBytes": 26773574,
+    "afterBytes": 9267138,
+    "savedBytes": 17506436,
+    "savedPercent": 65.4
+  },
+  "over150KB": [
+    {
+      "path": "src/assets/logo.png",
+      "bytes": 909952,
+      "kb": 888.6
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (7).jpg",
+      "bytes": 705914,
+      "kb": 689.4
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (2).jpg",
+      "bytes": 696626,
+      "kb": 680.3
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (10).jpg",
+      "bytes": 674209,
+      "kb": 658.4
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (11).jpg",
+      "bytes": 659544,
+      "kb": 644.1
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (1).jpg",
+      "bytes": 601452,
+      "kb": 587.4
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (6).jpg",
+      "bytes": 580432,
+      "kb": 566.8
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (1).jpg",
+      "bytes": 511098,
+      "kb": 499.1
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (4).jpg",
+      "bytes": 492689,
+      "kb": 481.1
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (2).jpg",
+      "bytes": 490033,
+      "kb": 478.5
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (2).jpg",
+      "bytes": 487332,
+      "kb": 475.9
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (5).jpg",
+      "bytes": 449479,
+      "kb": 438.9
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (6).jpg",
+      "bytes": 444638,
+      "kb": 434.2
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (1).jpg",
+      "bytes": 436017,
+      "kb": 425.8
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (2).jpg",
+      "bytes": 430874,
+      "kb": 420.8
+    },
+    {
+      "path": "src/assets/icon.png",
+      "bytes": 430365,
+      "kb": 420.3
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (4).jpg",
+      "bytes": 428032,
+      "kb": 418
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (10).jpg",
+      "bytes": 415486,
+      "kb": 405.7
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (13).jpg",
+      "bytes": 412652,
+      "kb": 403
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (1).jpg",
+      "bytes": 406069,
+      "kb": 396.6
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (3).jpg",
+      "bytes": 392826,
+      "kb": 383.6
+    },
+    {
+      "path": "src/assets/hero/3.jpg",
+      "bytes": 385244,
+      "kb": 376.2
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (7).jpg",
+      "bytes": 379900,
+      "kb": 371
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (9).jpg",
+      "bytes": 375634,
+      "kb": 366.8
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (8).jpg",
+      "bytes": 372480,
+      "kb": 363.8
+    },
+    {
+      "path": "src/assets/hero/18.jpg",
+      "bytes": 369992,
+      "kb": 361.3
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (4).jpg",
+      "bytes": 369422,
+      "kb": 360.8
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (8).jpg",
+      "bytes": 359565,
+      "kb": 351.1
+    },
+    {
+      "path": "src/assets/hero/6.jpg",
+      "bytes": 356579,
+      "kb": 348.2
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (11).jpg",
+      "bytes": 353292,
+      "kb": 345
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (11).jpg",
+      "bytes": 341557,
+      "kb": 333.6
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (12).jpg",
+      "bytes": 336383,
+      "kb": 328.5
+    },
+    {
+      "path": "src/assets/hero/13.jpg",
+      "bytes": 330600,
+      "kb": 322.9
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (3).jpg",
+      "bytes": 327693,
+      "kb": 320
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (5).jpg",
+      "bytes": 321111,
+      "kb": 313.6
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (4).jpg",
+      "bytes": 318681,
+      "kb": 311.2
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (10).jpg",
+      "bytes": 314296,
+      "kb": 306.9
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (3).jpg",
+      "bytes": 312822,
+      "kb": 305.5
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (9).jpg",
+      "bytes": 309065,
+      "kb": 301.8
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (3).jpg",
+      "bytes": 306628,
+      "kb": 299.4
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (6).jpg",
+      "bytes": 303333,
+      "kb": 296.2
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (5).jpg",
+      "bytes": 300262,
+      "kb": 293.2
+    },
+    {
+      "path": "src/assets/hero/9.jpg",
+      "bytes": 296420,
+      "kb": 289.5
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (12).jpg",
+      "bytes": 295314,
+      "kb": 288.4
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (7).jpg",
+      "bytes": 295226,
+      "kb": 288.3
+    },
+    {
+      "path": "src/assets/hero/20.jpg",
+      "bytes": 292052,
+      "kb": 285.2
+    },
+    {
+      "path": "src/assets/hero/8.jpg",
+      "bytes": 291262,
+      "kb": 284.4
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/705949313_1598808228913535_4327413411200846318_n.jpg",
+      "bytes": 289803,
+      "kb": 283
+    },
+    {
+      "path": "src/assets/hero/10.jpg",
+      "bytes": 278752,
+      "kb": 272.2
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (1).jpg",
+      "bytes": 277342,
+      "kb": 270.8
+    },
+    {
+      "path": "src/assets/hero/5.jpg",
+      "bytes": 262866,
+      "kb": 256.7
+    },
+    {
+      "path": "src/assets/hero/16.jpg",
+      "bytes": 262242,
+      "kb": 256.1
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/708313004_1598808202246871_3587173610398558850_n.jpg",
+      "bytes": 258867,
+      "kb": 252.8
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/705429307_1598808235580201_438805299260653429_n.jpg",
+      "bytes": 258036,
+      "kb": 252
+    },
+    {
+      "path": "src/assets/hero/7.jpg",
+      "bytes": 252945,
+      "kb": 247
+    },
+    {
+      "path": "src/assets/hero/14.jpg",
+      "bytes": 252331,
+      "kb": 246.4
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/706189471_1598808252246866_6663556992586158942_n.jpg",
+      "bytes": 249035,
+      "kb": 243.2
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/706734245_1598808505580174_523628228809146057_n.jpg",
+      "bytes": 237469,
+      "kb": 231.9
+    },
+    {
+      "path": "src/assets/hero/4.jpg",
+      "bytes": 234383,
+      "kb": 228.9
+    },
+    {
+      "path": "src/assets/hero/17.jpg",
+      "bytes": 229208,
+      "kb": 223.8
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/707114474_1598808442246847_4227380980523165175_n.jpg",
+      "bytes": 227350,
+      "kb": 222
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/705375033_1598808182246873_5270763673390481823_n.jpg",
+      "bytes": 219016,
+      "kb": 213.9
+    },
+    {
+      "path": "src/assets/hero/11.jpg",
+      "bytes": 218050,
+      "kb": 212.9
+    },
+    {
+      "path": "src/assets/hero/15.jpg",
+      "bytes": 217878,
+      "kb": 212.8
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (8).jpg",
+      "bytes": 216087,
+      "kb": 211
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (2).jpg",
+      "bytes": 202192,
+      "kb": 197.5
+    },
+    {
+      "path": "src/assets/hero/12.jpg",
+      "bytes": 199981,
+      "kb": 195.3
+    },
+    {
+      "path": "src/assets/fondo.png",
+      "bytes": 197922,
+      "kb": 193.3
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/708304922_1598808485580176_2198811317405795708_n.jpg",
+      "bytes": 197138,
+      "kb": 192.5
+    },
+    {
+      "path": "src/assets/hero/1.jpg",
+      "bytes": 191698,
+      "kb": 187.2
+    },
+    {
+      "path": "src/assets/hero/19.jpg",
+      "bytes": 190886,
+      "kb": 186.4
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (4).jpg",
+      "bytes": 190217,
+      "kb": 185.8
+    },
+    {
+      "path": "src/assets/hero/2.jpg",
+      "bytes": 180138,
+      "kb": 175.9
+    }
+  ],
+  "brandAssets": [
+    {
+      "path": "src/assets/logo.png",
+      "bytes": 909952,
+      "kb": 888.6
+    },
+    {
+      "path": "src/assets/icon.png",
+      "bytes": 430365,
+      "kb": 420.3
+    },
+    {
+      "path": "src/assets/fondo.png",
+      "bytes": 197922,
+      "kb": 193.3
+    },
+    {
+      "path": "src/assets/zt.png",
+      "bytes": 56255,
+      "kb": 54.9
+    }
+  ],
+  "duplicates": [],
+  "unused": [],
+  "conversions": [
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (1).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (1).webp",
+      "status": "converted",
+      "originalBytes": 436017,
+      "optimizedBytes": 144084,
+      "savedBytes": 291933,
+      "savedPercent": 67,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (10).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (10).webp",
+      "status": "converted",
+      "originalBytes": 415486,
+      "optimizedBytes": 133452,
+      "savedBytes": 282034,
+      "savedPercent": 67.9,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (11).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (11).webp",
+      "status": "converted",
+      "originalBytes": 353292,
+      "optimizedBytes": 111198,
+      "savedBytes": 242094,
+      "savedPercent": 68.5,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (12).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (12).webp",
+      "status": "converted",
+      "originalBytes": 295314,
+      "optimizedBytes": 91134,
+      "savedBytes": 204180,
+      "savedPercent": 69.1,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (13).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (13).webp",
+      "status": "converted",
+      "originalBytes": 412652,
+      "optimizedBytes": 136276,
+      "savedBytes": 276376,
+      "savedPercent": 67,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (2).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (2).webp",
+      "status": "converted",
+      "originalBytes": 430874,
+      "optimizedBytes": 137710,
+      "savedBytes": 293164,
+      "savedPercent": 68,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (3).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (3).webp",
+      "status": "converted",
+      "originalBytes": 312822,
+      "optimizedBytes": 92068,
+      "savedBytes": 220754,
+      "savedPercent": 70.6,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (4).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (4).webp",
+      "status": "converted",
+      "originalBytes": 369422,
+      "optimizedBytes": 111882,
+      "savedBytes": 257540,
+      "savedPercent": 69.7,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (5).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (5).webp",
+      "status": "converted",
+      "originalBytes": 449479,
+      "optimizedBytes": 143952,
+      "savedBytes": 305527,
+      "savedPercent": 68,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (6).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (6).webp",
+      "status": "converted",
+      "originalBytes": 444638,
+      "optimizedBytes": 140296,
+      "savedBytes": 304342,
+      "savedPercent": 68.4,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (7).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (7).webp",
+      "status": "converted",
+      "originalBytes": 379900,
+      "optimizedBytes": 115024,
+      "savedBytes": 264876,
+      "savedPercent": 69.7,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (8).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (8).webp",
+      "status": "converted",
+      "originalBytes": 359565,
+      "optimizedBytes": 113904,
+      "savedBytes": 245661,
+      "savedPercent": 68.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/aniversario32/foto (9).jpg",
+      "output": "src/assets/caminatas/aniversario32/foto (9).webp",
+      "status": "converted",
+      "originalBytes": 375634,
+      "optimizedBytes": 115650,
+      "savedBytes": 259984,
+      "savedPercent": 69.2,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (1).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (1).webp",
+      "status": "converted",
+      "originalBytes": 406069,
+      "optimizedBytes": 122634,
+      "savedBytes": 283435,
+      "savedPercent": 69.8,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (10).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (10).webp",
+      "status": "converted",
+      "originalBytes": 314296,
+      "optimizedBytes": 92270,
+      "savedBytes": 222026,
+      "savedPercent": 70.6,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (11).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (11).webp",
+      "status": "converted",
+      "originalBytes": 341557,
+      "optimizedBytes": 98664,
+      "savedBytes": 242893,
+      "savedPercent": 71.1,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (12).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (12).webp",
+      "status": "converted",
+      "originalBytes": 336383,
+      "optimizedBytes": 98500,
+      "savedBytes": 237883,
+      "savedPercent": 70.7,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (2).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (2).webp",
+      "status": "converted",
+      "originalBytes": 490033,
+      "optimizedBytes": 145682,
+      "savedBytes": 344351,
+      "savedPercent": 70.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (3).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (3).webp",
+      "status": "converted",
+      "originalBytes": 306628,
+      "optimizedBytes": 94126,
+      "savedBytes": 212502,
+      "savedPercent": 69.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (4).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (4).webp",
+      "status": "converted",
+      "originalBytes": 190217,
+      "optimizedBytes": 52734,
+      "savedBytes": 137483,
+      "savedPercent": 72.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (5).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (5).webp",
+      "status": "converted",
+      "originalBytes": 321111,
+      "optimizedBytes": 92290,
+      "savedBytes": 228821,
+      "savedPercent": 71.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (6).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (6).webp",
+      "status": "converted",
+      "originalBytes": 303333,
+      "optimizedBytes": 87206,
+      "savedBytes": 216127,
+      "savedPercent": 71.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (7).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (7).webp",
+      "status": "converted",
+      "originalBytes": 295226,
+      "optimizedBytes": 87726,
+      "savedBytes": 207500,
+      "savedPercent": 70.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (8).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (8).webp",
+      "status": "converted",
+      "originalBytes": 216087,
+      "optimizedBytes": 56814,
+      "savedBytes": 159273,
+      "savedPercent": 73.7,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caminata-vecinos/foto (9).jpg",
+      "output": "src/assets/caminatas/caminata-vecinos/foto (9).webp",
+      "status": "converted",
+      "originalBytes": 309065,
+      "optimizedBytes": 94138,
+      "savedBytes": 214927,
+      "savedPercent": 69.5,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (1).jpg",
+      "output": "src/assets/caminatas/caso-niña/foto (1).webp",
+      "status": "converted",
+      "originalBytes": 277342,
+      "optimizedBytes": 123202,
+      "savedBytes": 154140,
+      "savedPercent": 55.6,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (2).jpg",
+      "output": "src/assets/caminatas/caso-niña/foto (2).webp",
+      "status": "converted",
+      "originalBytes": 202192,
+      "optimizedBytes": 83078,
+      "savedBytes": 119114,
+      "savedPercent": 58.9,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (3).jpg",
+      "output": "src/assets/caminatas/caso-niña/foto (3).webp",
+      "status": "converted",
+      "originalBytes": 392826,
+      "optimizedBytes": 186716,
+      "savedBytes": 206110,
+      "savedPercent": 52.5,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (4).jpg",
+      "output": "src/assets/caminatas/caso-niña/foto (4).webp",
+      "status": "converted",
+      "originalBytes": 318681,
+      "optimizedBytes": 144010,
+      "savedBytes": 174671,
+      "savedPercent": 54.8,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/caso-niña/foto (5).jpg",
+      "output": "src/assets/caminatas/caso-niña/foto (5).webp",
+      "status": "converted",
+      "originalBytes": 149834,
+      "optimizedBytes": 57290,
+      "savedBytes": 92544,
+      "savedPercent": 61.8,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (1).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (1).webp",
+      "status": "converted",
+      "originalBytes": 511098,
+      "optimizedBytes": 131602,
+      "savedBytes": 379496,
+      "savedPercent": 74.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (10).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (10).webp",
+      "status": "converted",
+      "originalBytes": 674209,
+      "optimizedBytes": 202976,
+      "savedBytes": 471233,
+      "savedPercent": 69.9,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (11).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (11).webp",
+      "status": "converted",
+      "originalBytes": 659544,
+      "optimizedBytes": 189406,
+      "savedBytes": 470138,
+      "savedPercent": 71.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (2).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (2).webp",
+      "status": "converted",
+      "originalBytes": 696626,
+      "optimizedBytes": 206928,
+      "savedBytes": 489698,
+      "savedPercent": 70.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (3).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (3).webp",
+      "status": "converted",
+      "originalBytes": 80247,
+      "optimizedBytes": 47424,
+      "savedBytes": 32823,
+      "savedPercent": 40.9,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (4).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (4).webp",
+      "status": "converted",
+      "originalBytes": 492689,
+      "optimizedBytes": 128902,
+      "savedBytes": 363787,
+      "savedPercent": 73.8,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (5).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (5).webp",
+      "status": "converted",
+      "originalBytes": 60758,
+      "optimizedBytes": 31324,
+      "savedBytes": 29434,
+      "savedPercent": 48.4,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (6).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (6).webp",
+      "status": "converted",
+      "originalBytes": 580432,
+      "optimizedBytes": 160662,
+      "savedBytes": 419770,
+      "savedPercent": 72.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (7).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (7).webp",
+      "status": "converted",
+      "originalBytes": 705914,
+      "optimizedBytes": 210036,
+      "savedBytes": 495878,
+      "savedPercent": 70.2,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (8).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (8).webp",
+      "status": "converted",
+      "originalBytes": 372480,
+      "optimizedBytes": 85540,
+      "savedBytes": 286940,
+      "savedPercent": 77,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/homenaje-a-las-madres/foto (9).jpg",
+      "output": "src/assets/caminatas/homenaje-a-las-madres/foto (9).webp",
+      "status": "converted",
+      "originalBytes": 81484,
+      "optimizedBytes": 49774,
+      "savedBytes": 31710,
+      "savedPercent": 38.9,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur/foto (1).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur/foto (1).webp",
+      "status": "converted",
+      "originalBytes": 56215,
+      "optimizedBytes": 51094,
+      "savedBytes": 5121,
+      "savedPercent": 9.1,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur/foto (2).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur/foto (2).webp",
+      "status": "converted",
+      "originalBytes": 42698,
+      "optimizedBytes": 25366,
+      "savedBytes": 17332,
+      "savedPercent": 40.6,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur/foto (3).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur/foto (3).webp",
+      "status": "converted",
+      "originalBytes": 37630,
+      "optimizedBytes": 21922,
+      "savedBytes": 15708,
+      "savedPercent": 41.7,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur/foto (4).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur/foto (4).webp",
+      "status": "converted",
+      "originalBytes": 30918,
+      "optimizedBytes": 23872,
+      "savedBytes": 7046,
+      "savedPercent": 22.8,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur/foto (5).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur/foto (5).webp",
+      "status": "converted",
+      "originalBytes": 39905,
+      "optimizedBytes": 24008,
+      "savedBytes": 15897,
+      "savedPercent": 39.8,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (1).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur-2/foto (1).webp",
+      "status": "converted",
+      "originalBytes": 601452,
+      "optimizedBytes": 179370,
+      "savedBytes": 422082,
+      "savedPercent": 70.2,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (2).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur-2/foto (2).webp",
+      "status": "converted",
+      "originalBytes": 487332,
+      "optimizedBytes": 156200,
+      "savedBytes": 331132,
+      "savedPercent": 67.9,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (3).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur-2/foto (3).webp",
+      "status": "converted",
+      "originalBytes": 327693,
+      "optimizedBytes": 100662,
+      "savedBytes": 227031,
+      "savedPercent": 69.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (4).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur-2/foto (4).webp",
+      "status": "converted",
+      "originalBytes": 428032,
+      "optimizedBytes": 137556,
+      "savedBytes": 290476,
+      "savedPercent": 67.9,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/lomas-del-sur-2/foto (5).jpg",
+      "output": "src/assets/caminatas/lomas-del-sur-2/foto (5).webp",
+      "status": "converted",
+      "originalBytes": 300262,
+      "optimizedBytes": 91886,
+      "savedBytes": 208376,
+      "savedPercent": 69.4,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (1).jpg",
+      "output": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (1).webp",
+      "status": "converted",
+      "originalBytes": 58469,
+      "optimizedBytes": 36916,
+      "savedBytes": 21553,
+      "savedPercent": 36.9,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (2).jpg",
+      "output": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (2).webp",
+      "status": "converted",
+      "originalBytes": 45018,
+      "optimizedBytes": 27250,
+      "savedBytes": 17768,
+      "savedPercent": 39.5,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (3).jpg",
+      "output": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (3).webp",
+      "status": "converted",
+      "originalBytes": 56848,
+      "optimizedBytes": 35496,
+      "savedBytes": 21352,
+      "savedPercent": 37.6,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (4).jpg",
+      "output": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (4).webp",
+      "status": "converted",
+      "originalBytes": 49125,
+      "optimizedBytes": 29028,
+      "savedBytes": 20097,
+      "savedPercent": 40.9,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (5).jpg",
+      "output": "src/assets/caminatas/San-Luis-Segunda-Etapa/foto (5).webp",
+      "status": "converted",
+      "originalBytes": 43462,
+      "optimizedBytes": 26220,
+      "savedBytes": 17242,
+      "savedPercent": 39.7,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/705277397_1598808122246879_3976120702224042730_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/705277397_1598808122246879_3976120702224042730_n.webp",
+      "status": "converted",
+      "originalBytes": 49404,
+      "optimizedBytes": 28404,
+      "savedBytes": 21000,
+      "savedPercent": 42.5,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/705375033_1598808182246873_5270763673390481823_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/705375033_1598808182246873_5270763673390481823_n.webp",
+      "status": "converted",
+      "originalBytes": 219016,
+      "optimizedBytes": 163254,
+      "savedBytes": 55762,
+      "savedPercent": 25.5,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/705429307_1598808235580201_438805299260653429_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/705429307_1598808235580201_438805299260653429_n.webp",
+      "status": "converted",
+      "originalBytes": 258036,
+      "optimizedBytes": 112450,
+      "savedBytes": 145586,
+      "savedPercent": 56.4,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/705949313_1598808228913535_4327413411200846318_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/705949313_1598808228913535_4327413411200846318_n.webp",
+      "status": "converted",
+      "originalBytes": 289803,
+      "optimizedBytes": 130274,
+      "savedBytes": 159529,
+      "savedPercent": 55,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/706189471_1598808252246866_6663556992586158942_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/706189471_1598808252246866_6663556992586158942_n.webp",
+      "status": "converted",
+      "originalBytes": 249035,
+      "optimizedBytes": 103438,
+      "savedBytes": 145597,
+      "savedPercent": 58.5,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/706465309_1598808085580216_2347563023478443092_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/706465309_1598808085580216_2347563023478443092_n.webp",
+      "status": "converted",
+      "originalBytes": 54112,
+      "optimizedBytes": 33022,
+      "savedBytes": 21090,
+      "savedPercent": 39,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/706734245_1598808505580174_523628228809146057_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/706734245_1598808505580174_523628228809146057_n.webp",
+      "status": "converted",
+      "originalBytes": 237469,
+      "optimizedBytes": 97208,
+      "savedBytes": 140261,
+      "savedPercent": 59.1,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/707114474_1598808442246847_4227380980523165175_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/707114474_1598808442246847_4227380980523165175_n.webp",
+      "status": "converted",
+      "originalBytes": 227350,
+      "optimizedBytes": 90362,
+      "savedBytes": 136988,
+      "savedPercent": 60.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/707235685_1598808395580185_4545997279973054536_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/707235685_1598808395580185_4545997279973054536_n.webp",
+      "status": "converted",
+      "originalBytes": 59386,
+      "optimizedBytes": 35666,
+      "savedBytes": 23720,
+      "savedPercent": 39.9,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/707523240_1598808142246877_8897566829734013190_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/707523240_1598808142246877_8897566829734013190_n.webp",
+      "status": "converted",
+      "originalBytes": 59442,
+      "optimizedBytes": 37248,
+      "savedBytes": 22194,
+      "savedPercent": 37.3,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/708304922_1598808485580176_2198811317405795708_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/708304922_1598808485580176_2198811317405795708_n.webp",
+      "status": "converted",
+      "originalBytes": 197138,
+      "optimizedBytes": 135038,
+      "savedBytes": 62100,
+      "savedPercent": 31.5,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/caminatas/talleres-gratuito/708313004_1598808202246871_3587173610398558850_n.jpg",
+      "output": "src/assets/caminatas/talleres-gratuito/708313004_1598808202246871_3587173610398558850_n.webp",
+      "status": "converted",
+      "originalBytes": 258867,
+      "optimizedBytes": 197174,
+      "savedBytes": 61693,
+      "savedPercent": 23.8,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/fondo.png",
+      "output": "src/assets/fondo.webp",
+      "status": "converted",
+      "originalBytes": 197922,
+      "optimizedBytes": 28290,
+      "savedBytes": 169632,
+      "savedPercent": 85.7,
+      "maxWidthApplied": null,
+      "quality": 80
+    },
+    {
+      "path": "src/assets/hero/1.jpg",
+      "output": "src/assets/hero/1.webp",
+      "status": "converted",
+      "originalBytes": 191698,
+      "optimizedBytes": 78254,
+      "savedBytes": 113444,
+      "savedPercent": 59.2,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/10.jpg",
+      "output": "src/assets/hero/10.webp",
+      "status": "converted",
+      "originalBytes": 278752,
+      "optimizedBytes": 129192,
+      "savedBytes": 149560,
+      "savedPercent": 53.7,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/11.jpg",
+      "output": "src/assets/hero/11.webp",
+      "status": "converted",
+      "originalBytes": 218050,
+      "optimizedBytes": 89780,
+      "savedBytes": 128270,
+      "savedPercent": 58.8,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/12.jpg",
+      "output": "src/assets/hero/12.webp",
+      "status": "converted",
+      "originalBytes": 199981,
+      "optimizedBytes": 83866,
+      "savedBytes": 116115,
+      "savedPercent": 58.1,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/13.jpg",
+      "output": "src/assets/hero/13.webp",
+      "status": "converted",
+      "originalBytes": 330600,
+      "optimizedBytes": 150168,
+      "savedBytes": 180432,
+      "savedPercent": 54.6,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/14.jpg",
+      "output": "src/assets/hero/14.webp",
+      "status": "converted",
+      "originalBytes": 252331,
+      "optimizedBytes": 114680,
+      "savedBytes": 137651,
+      "savedPercent": 54.6,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/15.jpg",
+      "output": "src/assets/hero/15.webp",
+      "status": "converted",
+      "originalBytes": 217878,
+      "optimizedBytes": 90672,
+      "savedBytes": 127206,
+      "savedPercent": 58.4,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/16.jpg",
+      "output": "src/assets/hero/16.webp",
+      "status": "converted",
+      "originalBytes": 262242,
+      "optimizedBytes": 115826,
+      "savedBytes": 146416,
+      "savedPercent": 55.8,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/17.jpg",
+      "output": "src/assets/hero/17.webp",
+      "status": "converted",
+      "originalBytes": 229208,
+      "optimizedBytes": 101192,
+      "savedBytes": 128016,
+      "savedPercent": 55.9,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/18.jpg",
+      "output": "src/assets/hero/18.webp",
+      "status": "converted",
+      "originalBytes": 369992,
+      "optimizedBytes": 171364,
+      "savedBytes": 198628,
+      "savedPercent": 53.7,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/19.jpg",
+      "output": "src/assets/hero/19.webp",
+      "status": "converted",
+      "originalBytes": 190886,
+      "optimizedBytes": 74298,
+      "savedBytes": 116588,
+      "savedPercent": 61.1,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/2.jpg",
+      "output": "src/assets/hero/2.webp",
+      "status": "converted",
+      "originalBytes": 180138,
+      "optimizedBytes": 72436,
+      "savedBytes": 107702,
+      "savedPercent": 59.8,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/20.jpg",
+      "output": "src/assets/hero/20.webp",
+      "status": "converted",
+      "originalBytes": 292052,
+      "optimizedBytes": 137758,
+      "savedBytes": 154294,
+      "savedPercent": 52.8,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/3.jpg",
+      "output": "src/assets/hero/3.webp",
+      "status": "converted",
+      "originalBytes": 385244,
+      "optimizedBytes": 132418,
+      "savedBytes": 252826,
+      "savedPercent": 65.6,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/4.jpg",
+      "output": "src/assets/hero/4.webp",
+      "status": "converted",
+      "originalBytes": 234383,
+      "optimizedBytes": 66468,
+      "savedBytes": 167915,
+      "savedPercent": 71.6,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/5.jpg",
+      "output": "src/assets/hero/5.webp",
+      "status": "converted",
+      "originalBytes": 262866,
+      "optimizedBytes": 139550,
+      "savedBytes": 123316,
+      "savedPercent": 46.9,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/6.jpg",
+      "output": "src/assets/hero/6.webp",
+      "status": "converted",
+      "originalBytes": 356579,
+      "optimizedBytes": 192140,
+      "savedBytes": 164439,
+      "savedPercent": 46.1,
+      "maxWidthApplied": null,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/7.jpg",
+      "output": "src/assets/hero/7.webp",
+      "status": "converted",
+      "originalBytes": 252945,
+      "optimizedBytes": 115580,
+      "savedBytes": 137365,
+      "savedPercent": 54.3,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/8.jpg",
+      "output": "src/assets/hero/8.webp",
+      "status": "converted",
+      "originalBytes": 291262,
+      "optimizedBytes": 131168,
+      "savedBytes": 160094,
+      "savedPercent": 55,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/hero/9.jpg",
+      "output": "src/assets/hero/9.webp",
+      "status": "converted",
+      "originalBytes": 296420,
+      "optimizedBytes": 142336,
+      "savedBytes": 154084,
+      "savedPercent": 52,
+      "maxWidthApplied": 1400,
+      "quality": 82
+    },
+    {
+      "path": "src/assets/icon.png",
+      "output": "src/assets/icon.webp",
+      "status": "converted",
+      "originalBytes": 430365,
+      "optimizedBytes": 6782,
+      "savedBytes": 423583,
+      "savedPercent": 98.4,
+      "maxWidthApplied": 256,
+      "quality": 88
+    },
+    {
+      "path": "src/assets/logo.png",
+      "output": "src/assets/logo.webp",
+      "status": "converted",
+      "originalBytes": 909952,
+      "optimizedBytes": 18168,
+      "savedBytes": 891784,
+      "savedPercent": 98,
+      "maxWidthApplied": 512,
+      "quality": 88
+    },
+    {
+      "path": "src/assets/zt.png",
+      "output": "src/assets/zt.webp",
+      "status": "converted",
+      "originalBytes": 56255,
+      "optimizedBytes": 6084,
+      "savedBytes": 50171,
+      "savedPercent": 89.2,
+      "maxWidthApplied": 256,
+      "quality": 88
+    }
+  ]
+}
