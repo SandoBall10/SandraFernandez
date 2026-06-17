@@ -112,16 +112,16 @@ export default function Footer() {
             href={ZENTRITSOFT_INSTAGRAM}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-[#FFCA00] transition-colors"
+            className="inline-flex items-center gap-2.5 rounded-xl border border-zinc-700 bg-zinc-900/90 px-4 py-2.5 text-sm text-zinc-200 hover:border-[#14B88A] hover:bg-zinc-900 hover:text-white transition-all shadow-sm"
             aria-label="Desarrollado por ZentrIT - Instagram"
           >
-            <span>Desarrollado por</span>
+            <span className="font-sans text-zinc-400">Desarrollado por</span>
             <img
               src={ztLogoImg}
               alt="ZentrIT"
-              className="h-5 w-auto object-contain"
+              className="h-7 w-auto object-contain"
             />
-            <span className="font-medium">zentritsoft</span>
+            <span className="font-sans font-bold text-[#14B88A] tracking-tight">zentritsoft</span>
           </a>
 
         </div>
