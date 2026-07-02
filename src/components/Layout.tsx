@@ -5,6 +5,7 @@ import Hero from './Hero';
 import BioSection from './BioSection';
 import PlanGobierno from './PlanGobierno';
 import VideosSection from './VideosSection';
+import CampaignGallerySection from './CampaignGallerySection';
 import WalksCarousel from './WalksCarousel';
 import JoinForm from './JoinForm';
 import Footer from './Footer';
@@ -50,6 +51,7 @@ export default function Layout() {
         </div>
       </div>
 
+      <CampaignGallerySection />
       <JoinForm />
       <Footer />
     </div>
