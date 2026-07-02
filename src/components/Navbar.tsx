@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import FlipClock from './FlipClock';
@@ -6,28 +6,72 @@ import logoImg from '@/src/assets/logo.webp';
 import { NAV_ROUTES } from '../lib/routes';
 import { scrollToSectionById } from '../lib/scrollToSection';
 
+function measureHeaderHeight(): number {
+  return document.getElementById('main-header')?.offsetHeight ?? 128;
+}
+
+function getActiveNavSectionId(): string {
+  const headerH = measureHeaderHeight();
+  const probe = window.scrollY + headerH + 96;
+
+  let current = NAV_ROUTES[0].sectionId;
+  for (const route of NAV_ROUTES) {
+    const element = document.getElementById(route.sectionId);
+    if (element && element.offsetTop <= probe) {
+      current = route.sectionId;
+    }
+  }
+
+  return current;
+}
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSectionId, setActiveSectionId] = useState(NAV_ROUTES[0].sectionId);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const syncActiveSection = useCallback(() => {
+    setActiveSectionId(getActiveNavSectionId());
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      syncActiveSection();
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, [syncActiveSection]);
+
+  useEffect(() => {
+    const navRoute = NAV_ROUTES.find((route) => route.path === location.pathname);
+    if (navRoute) {
+      setActiveSectionId(navRoute.sectionId);
+    }
+
+    const timer = window.setTimeout(syncActiveSection, 400);
+    return () => window.clearTimeout(timer);
+  }, [location.pathname, syncActiveSection]);
 
   const goToRoute = (path: string, sectionId: string) => {
     setIsOpen(false);
+    setActiveSectionId(sectionId);
     if (location.pathname === path) {
       scrollToSectionById(sectionId);
     } else {
       navigate(path);
     }
   };
+
+  const isNavActive = (sectionId: string) => activeSectionId === sectionId;
 
   return (
     <header
@@ -79,17 +123,27 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" id="desktop-nav">
-            {NAV_ROUTES.map((link) => (
+            {NAV_ROUTES.map((link) => {
+              const active = isNavActive(link.sectionId);
+              return (
               <button
                 key={link.path}
                 onClick={() => goToRoute(link.path, link.sectionId)}
-                className="font-sans text-sm font-medium text-gray-700 hover:text-black transition-colors duration-200 relative py-1 group focus:outline-none"
+                className={`group font-sans text-sm font-medium transition-colors duration-200 relative py-1 focus:outline-none ${
+                  active ? 'text-black font-semibold' : 'text-gray-700 hover:text-black'
+                }`}
                 id={`nav-${link.sectionId}`}
+                aria-current={active ? 'page' : undefined}
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFCA00] transition-all duration-300 group-hover:w-full" />
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-[#FFCA00] transition-all duration-300 ${
+                    active ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
+                />
               </button>
-            ))}
+            );
+            })}
           </nav>
 
           {/* Action CTA / Flip Clock Elections Countdown */}
@@ -118,16 +172,22 @@ export default function Navbar() {
           className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-xl px-4 py-6 md:hidden animate-fade-in"
         >
           <div className="flex flex-col space-y-4">
-            {NAV_ROUTES.map((link) => (
+            {NAV_ROUTES.map((link) => {
+              const active = isNavActive(link.sectionId);
+              return (
               <button
                 key={link.path}
                 onClick={() => goToRoute(link.path, link.sectionId)}
-                className="font-sans text-base font-semibold text-gray-800 hover:text-[#FFCA00] text-left py-2 border-b border-gray-50 focus:outline-none"
+                className={`font-sans text-base font-semibold text-left py-2 border-b border-gray-50 focus:outline-none transition-colors ${
+                  active ? 'text-black' : 'text-gray-800 hover:text-black'
+                }`}
                 id={`nav-mob-${link.sectionId}`}
+                aria-current={active ? 'page' : undefined}
               >
                 {link.label}
               </button>
-            ))}
+            );
+            })}
             <div className="flex justify-center pt-4 border-t border-gray-100">
               <FlipClock />
             </div>

@@ -73,8 +73,10 @@ export const SITE_ROUTES: SiteRoute[] = [
   },
 ];
 
-export const NAV_ROUTES = SITE_ROUTES.filter((route) =>
-  ['/', '/sandra', '/plan-gobierno', '/videos'].includes(route.path)
+export const NAV_ROUTES: SiteRoute[] = SITE_ROUTES.filter((route) =>
+  ['/', '/sandra', '/plan-gobierno', '/unete'].includes(route.path)
+).map((route) =>
+  route.path === '/unete' ? { ...route, label: 'Contáctanos' } : route
 );
 
 export function getRouteByPath(pathname: string): SiteRoute {

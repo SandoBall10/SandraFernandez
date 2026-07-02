@@ -1,6 +1,9 @@
 import { CampaignVideo, Testimonial, WalkCampaignMeta } from './types';
 import { buildWalkCampaigns } from './lib/walkAssets';
 
+export const WHATSAPP_GROUP_URL =
+  'https://chat.whatsapp.com/EA8xrmsvSd6LDBZ0nnsOWI';
+
 export const CANDIDATE_INFO = {
   name: 'Sandra Fernández',
   tagline: 'Liderazgo, Gestión y Corazón para Nuestro Municipio',
