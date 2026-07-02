@@ -27,11 +27,11 @@ const StickyScrollGallery = forwardRef<HTMLElement, StickyScrollGalleryProps>(
       <section
         ref={ref}
         id="galeria"
-        className="relative bg-black text-white"
+        className="relative z-10 bg-black text-white"
         aria-label="Galería de la campaña"
       >
         <div className="wrapper">
-          <section className="text-white min-h-[min(38vh,20rem)] py-10 sm:py-12 w-full bg-zinc-950 grid place-content-center sticky top-0 z-20">
+          <section className="text-white min-h-[min(38vh,20rem)] py-10 sm:py-12 w-full bg-zinc-950 grid place-content-center sticky top-0 z-20 isolate">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
             <div className="relative z-10 px-6 sm:px-10 text-center space-y-3 max-w-4xl mx-auto">

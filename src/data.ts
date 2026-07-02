@@ -4,6 +4,12 @@ import { buildWalkCampaigns } from './lib/walkAssets';
 export const WHATSAPP_GROUP_URL =
   'https://chat.whatsapp.com/EA8xrmsvSd6LDBZ0nnsOWI';
 
+export const TIKTOK_URL =
+  'https://www.tiktok.com/@laabogadadelpuebloof?is_from_webapp=1&sender_device=pc';
+
+export const FACEBOOK_URL =
+  'https://www.facebook.com/profile.php?id=100063531207297';
+
 export const CANDIDATE_INFO = {
   name: 'Sandra Fernández',
   tagline: 'Liderazgo, Gestión y Corazón para Nuestro Municipio',

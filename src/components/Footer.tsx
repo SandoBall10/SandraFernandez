@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import logoImg from '@/src/assets/logo.webp';
 import ztLogoImg from '@/src/assets/zt.webp';
 import { SITE_ROUTES } from '../lib/routes';
+import { FACEBOOK_URL, TIKTOK_URL } from '../data';
 import RevealOnScroll from './RevealOnScroll';
 
 const ZENTRITSOFT_INSTAGRAM = 'https://www.instagram.com/zentritsoft/';
-const TIKTOK_URL = 'https://www.tiktok.com/@laabogadadelpuebloof?is_from_webapp=1&sender_device=pc';
-const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=100063531207297';
 
 export default function Footer() {
   return (

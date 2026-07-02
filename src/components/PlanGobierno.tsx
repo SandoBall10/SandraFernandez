@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { Download, BookOpen, Clock, FileText, CheckCircle, Loader2, Shield } from 'lucide-react';
+import { Download, BookOpen, Clock, FileText, CheckCircle, Loader2, Shield, Eye } from 'lucide-react';
 import {
   CAMPAIGN_PLAN_DOCUMENTS,
   CampaignPlanDocument,
   downloadCampaignPlan,
 } from '../lib/campaignPlans';
 import RevealOnScroll from './RevealOnScroll';
+import PlanPdfPreviewModal from './PlanPdfPreviewModal';
 
 const ROTATE_MS = 8000;
 const PAUSE_AFTER_MANUAL_MS = 14000;
@@ -16,22 +17,34 @@ export default function PlanGobierno() {
   const [isPaused, setIsPaused] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadSuccess, setDownloadSuccess] = useState(false);
+  const [previewPlan, setPreviewPlan] = useState<CampaignPlanDocument | null>(null);
 
   const activePlan = CAMPAIGN_PLAN_DOCUMENTS[activeIndex];
+  const rotationPaused = isPaused || previewPlan !== null;
 
   useEffect(() => {
-    if (isPaused) return;
+    if (rotationPaused) return;
 
     const timer = window.setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % CAMPAIGN_PLAN_DOCUMENTS.length);
     }, ROTATE_MS);
 
     return () => window.clearInterval(timer);
-  }, [isPaused]);
+  }, [rotationPaused]);
 
   const selectPlan = (index: number) => {
     setActiveIndex(index);
     setIsPaused(true);
+    window.setTimeout(() => setIsPaused(false), PAUSE_AFTER_MANUAL_MS);
+  };
+
+  const handlePreview = (plan: CampaignPlanDocument) => {
+    setPreviewPlan(plan);
+    setIsPaused(true);
+  };
+
+  const handleClosePreview = () => {
+    setPreviewPlan(null);
     window.setTimeout(() => setIsPaused(false), PAUSE_AFTER_MANUAL_MS);
   };
 
@@ -156,33 +169,44 @@ export default function PlanGobierno() {
                 </div>
 
                 <div className="space-y-3">
-                  <button
-                    onClick={() => handleDownload(activePlan)}
-                    disabled={isDownloading}
-                    className={`w-full font-sans font-extrabold text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 cursor-pointer focus:outline-none transition-all duration-300 ${
-                      downloadSuccess
-                        ? 'bg-zinc-800 text-white border border-zinc-700'
-                        : 'bg-[#FFCA00] text-black hover:bg-[#ffe066] shadow-[0_4px_14px_rgba(255,202,0,0.25)]'
-                    }`}
-                    id={`action-download-${activePlan.id}`}
-                  >
-                    {isDownloading ? (
-                      <>
-                        <Loader2 size={18} className="animate-spin" />
-                        <span>Descargando...</span>
-                      </>
-                    ) : downloadSuccess ? (
-                      <>
-                        <CheckCircle size={18} className="text-green-400" />
-                        <span>¡Descargado!</span>
-                      </>
-                    ) : (
-                      <>
-                        <Download size={18} />
-                        <span>Descargar PDF</span>
-                      </>
-                    )}
-                  </button>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => handlePreview(activePlan)}
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-[#FFCA00] bg-transparent py-3.5 px-4 font-sans text-sm font-extrabold text-[#FFCA00] transition-all duration-300 hover:bg-[#FFCA00] hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFCA00] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
+                      id={`action-preview-${activePlan.id}`}
+                    >
+                      <Eye size={18} />
+                      <span>Ver documento</span>
+                    </button>
+                    <button
+                      onClick={() => handleDownload(activePlan)}
+                      disabled={isDownloading}
+                      className={`inline-flex flex-1 items-center justify-center gap-2 rounded-xl py-3.5 px-4 font-sans text-sm font-extrabold cursor-pointer focus:outline-none transition-all duration-300 ${
+                        downloadSuccess
+                          ? 'bg-zinc-800 text-white border border-zinc-700'
+                          : 'bg-[#FFCA00] text-black hover:bg-[#ffe066] shadow-[0_4px_14px_rgba(255,202,0,0.25)]'
+                      }`}
+                      id={`action-download-${activePlan.id}`}
+                    >
+                      {isDownloading ? (
+                        <>
+                          <Loader2 size={18} className="animate-spin" />
+                          <span>Descargando...</span>
+                        </>
+                      ) : downloadSuccess ? (
+                        <>
+                          <CheckCircle size={18} className="text-green-400" />
+                          <span>¡Descargado!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Download size={18} />
+                          <span>Descargar PDF</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
                   <p className="font-sans text-[11px] text-zinc-500 text-center">
                     Tamaño: <span className="text-zinc-400">{activePlan.fileSize}</span>
                     {' • '}
@@ -194,6 +218,8 @@ export default function PlanGobierno() {
           </AnimatePresence>
         </div>
       </div>
+
+      <PlanPdfPreviewModal plan={previewPlan} onClose={handleClosePreview} />
     </section>
   );
 }

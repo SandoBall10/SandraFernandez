@@ -15,6 +15,7 @@ export default function RoadScrollBackground() {
       setHeaderHeight(headerH);
 
       const zone = document.getElementById('light-sections');
+      const gallery = document.getElementById('galeria');
       const join = document.getElementById('unete');
       if (!zone) return;
 
@@ -31,10 +32,22 @@ export default function RoadScrollBackground() {
       }
 
       let fade = 1;
+      if (gallery) {
+        const galleryTop = gallery.offsetTop;
+        if (scrollY + vh > galleryTop - vh * 0.25) {
+          fade = Math.min(
+            fade,
+            Math.max(0, (galleryTop - scrollY - vh * 0.25) / (vh * 0.4))
+          );
+        }
+      }
       if (join) {
         const joinTop = join.offsetTop;
         if (scrollY + vh > joinTop - vh * 0.15) {
-          fade = Math.max(0, (joinTop - scrollY - vh * 0.15) / (vh * 0.35));
+          fade = Math.min(
+            fade,
+            Math.max(0, (joinTop - scrollY - vh * 0.15) / (vh * 0.35))
+          );
         }
       }
 

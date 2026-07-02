@@ -9,7 +9,7 @@ import CampaignGallerySection from './CampaignGallerySection';
 import WalksCarousel from './WalksCarousel';
 import JoinForm from './JoinForm';
 import Footer from './Footer';
-import WhatsAppFloatButton from './WhatsAppFloatButton';
+import SocialFloatButton from './SocialFloatButton';
 import RoadScrollBackground from './RoadScrollBackground';
 import Seo from './Seo';
 import { getRouteByPath, SITE_ROUTES } from '../lib/routes';
@@ -55,7 +55,7 @@ export default function Layout() {
       <CampaignGallerySection />
       <JoinForm />
       <Footer />
-      <WhatsAppFloatButton />
+      <SocialFloatButton />
     </div>
   );
 }
